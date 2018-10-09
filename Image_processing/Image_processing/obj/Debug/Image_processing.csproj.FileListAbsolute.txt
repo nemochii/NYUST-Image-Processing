@@ -17,3 +17,12 @@ C:\Users\user\Desktop\Code\Independent Study\Image_processing\Image_processing\o
 C:\Users\user\Desktop\Code\Independent Study\Image_processing\Image_processing\obj\Debug\Image_processing.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\Code\Independent Study\Image_processing\Image_processing\obj\Debug\Image_processing.exe
 C:\Users\user\Desktop\Code\Independent Study\Image_processing\Image_processing\obj\Debug\Image_processing.pdb
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\bin\Debug\Image_processing.exe.config
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.exe
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.pdb
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\bin\Debug\Image_processing.exe
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\bin\Debug\Image_processing.pdb
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.csprojResolveAssemblyReference.cache
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.Form1.resources
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.Properties.Resources.resources
+C:\Users\STD\Desktop\image_processing\Image_processing\Image_processing\obj\Debug\Image_processing.csproj.GenerateResource.Cache

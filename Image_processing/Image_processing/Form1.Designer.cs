@@ -54,6 +54,8 @@
             this.medium = new System.Windows.Forms.Button();
             this.average = new System.Windows.Forms.Button();
             this.priority = new System.Windows.Forms.Button();
+            this.Sobel = new System.Windows.Forms.Button();
+            this.laplacian = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -66,10 +68,10 @@
             // 
             // Open
             // 
-            this.Open.Location = new System.Drawing.Point(40, 32);
-            this.Open.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Open.Location = new System.Drawing.Point(30, 43);
+            this.Open.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(99, 40);
+            this.Open.Size = new System.Drawing.Size(74, 32);
             this.Open.TabIndex = 0;
             this.Open.Text = "Open";
             this.Open.UseVisualStyleBackColor = true;
@@ -77,10 +79,10 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(145, 32);
-            this.Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Save.Location = new System.Drawing.Point(109, 43);
+            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(99, 40);
+            this.Save.Size = new System.Drawing.Size(74, 32);
             this.Save.TabIndex = 1;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
@@ -88,48 +90,50 @@
             // 
             // origin_picture
             // 
-            this.origin_picture.Location = new System.Drawing.Point(40, 138);
-            this.origin_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.origin_picture.Location = new System.Drawing.Point(30, 110);
+            this.origin_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origin_picture.Name = "origin_picture";
-            this.origin_picture.Size = new System.Drawing.Size(463, 468);
+            this.origin_picture.Size = new System.Drawing.Size(347, 374);
             this.origin_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.origin_picture.TabIndex = 2;
             this.origin_picture.TabStop = false;
             // 
             // processed_picture
             // 
-            this.processed_picture.Location = new System.Drawing.Point(552, 138);
-            this.processed_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.processed_picture.Location = new System.Drawing.Point(414, 110);
+            this.processed_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.processed_picture.Name = "processed_picture";
-            this.processed_picture.Size = new System.Drawing.Size(463, 468);
+            this.processed_picture.Size = new System.Drawing.Size(347, 374);
             this.processed_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.processed_picture.TabIndex = 3;
             this.processed_picture.TabStop = false;
             // 
             // origin_pixel
             // 
-            this.origin_pixel.Location = new System.Drawing.Point(403, 112);
+            this.origin_pixel.Location = new System.Drawing.Point(302, 90);
+            this.origin_pixel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.origin_pixel.Name = "origin_pixel";
-            this.origin_pixel.Size = new System.Drawing.Size(100, 22);
+            this.origin_pixel.Size = new System.Drawing.Size(75, 18);
             this.origin_pixel.TabIndex = 4;
             this.origin_pixel.Text = "0x0";
             this.origin_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // processing_pixel
             // 
-            this.processing_pixel.Location = new System.Drawing.Point(915, 112);
+            this.processing_pixel.Location = new System.Drawing.Point(686, 90);
+            this.processing_pixel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.processing_pixel.Name = "processing_pixel";
-            this.processing_pixel.Size = new System.Drawing.Size(100, 22);
+            this.processing_pixel.Size = new System.Drawing.Size(75, 18);
             this.processing_pixel.TabIndex = 5;
             this.processing_pixel.Text = "0x0";
             this.processing_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // origin
             // 
-            this.origin.Location = new System.Drawing.Point(251, 32);
-            this.origin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.origin.Location = new System.Drawing.Point(188, 43);
+            this.origin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origin.Name = "origin";
-            this.origin.Size = new System.Drawing.Size(99, 40);
+            this.origin.Size = new System.Drawing.Size(74, 32);
             this.origin.TabIndex = 6;
             this.origin.Text = "Origin";
             this.origin.UseVisualStyleBackColor = true;
@@ -137,26 +141,26 @@
             // 
             // width
             // 
-            this.width.Location = new System.Drawing.Point(1281, 32);
-            this.width.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.width.Location = new System.Drawing.Point(961, 26);
+            this.width.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.width.Name = "width";
-            this.width.Size = new System.Drawing.Size(111, 25);
+            this.width.Size = new System.Drawing.Size(84, 22);
             this.width.TabIndex = 7;
             // 
             // height
             // 
-            this.height.Location = new System.Drawing.Point(1281, 64);
-            this.height.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.height.Location = new System.Drawing.Point(961, 51);
+            this.height.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.height.Name = "height";
-            this.height.Size = new System.Drawing.Size(111, 25);
+            this.height.Size = new System.Drawing.Size(84, 22);
             this.height.TabIndex = 8;
             // 
             // resize
             // 
-            this.resize.Location = new System.Drawing.Point(1408, 32);
-            this.resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.resize.Location = new System.Drawing.Point(1056, 26);
+            this.resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.resize.Name = "resize";
-            this.resize.Size = new System.Drawing.Size(59, 56);
+            this.resize.Size = new System.Drawing.Size(44, 45);
             this.resize.TabIndex = 9;
             this.resize.Text = "Resize";
             this.resize.UseVisualStyleBackColor = true;
@@ -164,82 +168,84 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(1175, 32);
+            this.label1.Location = new System.Drawing.Point(881, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 22);
+            this.label1.Size = new System.Drawing.Size(75, 18);
             this.label1.TabIndex = 10;
             this.label1.Text = "Width";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(1175, 64);
+            this.label2.Location = new System.Drawing.Point(881, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Height";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // origin_R
             // 
-            this.origin_R.Location = new System.Drawing.Point(40, 626);
-            this.origin_R.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.origin_R.Location = new System.Drawing.Point(30, 501);
+            this.origin_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origin_R.Name = "origin_R";
-            this.origin_R.Size = new System.Drawing.Size(139, 111);
+            this.origin_R.Size = new System.Drawing.Size(104, 89);
             this.origin_R.TabIndex = 12;
             this.origin_R.TabStop = false;
             // 
             // origin_G
             // 
-            this.origin_G.Location = new System.Drawing.Point(203, 626);
-            this.origin_G.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.origin_G.Location = new System.Drawing.Point(152, 501);
+            this.origin_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origin_G.Name = "origin_G";
-            this.origin_G.Size = new System.Drawing.Size(139, 111);
+            this.origin_G.Size = new System.Drawing.Size(104, 89);
             this.origin_G.TabIndex = 13;
             this.origin_G.TabStop = false;
             // 
             // origin_B
             // 
-            this.origin_B.Location = new System.Drawing.Point(365, 626);
-            this.origin_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.origin_B.Location = new System.Drawing.Point(274, 501);
+            this.origin_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origin_B.Name = "origin_B";
-            this.origin_B.Size = new System.Drawing.Size(139, 111);
+            this.origin_B.Size = new System.Drawing.Size(104, 89);
             this.origin_B.TabIndex = 14;
             this.origin_B.TabStop = false;
             // 
             // processed_B
             // 
-            this.processed_B.Location = new System.Drawing.Point(877, 626);
-            this.processed_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.processed_B.Location = new System.Drawing.Point(658, 501);
+            this.processed_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.processed_B.Name = "processed_B";
-            this.processed_B.Size = new System.Drawing.Size(139, 111);
+            this.processed_B.Size = new System.Drawing.Size(104, 89);
             this.processed_B.TabIndex = 17;
             this.processed_B.TabStop = false;
             // 
             // processed_G
             // 
-            this.processed_G.Location = new System.Drawing.Point(715, 626);
-            this.processed_G.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.processed_G.Location = new System.Drawing.Point(536, 501);
+            this.processed_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.processed_G.Name = "processed_G";
-            this.processed_G.Size = new System.Drawing.Size(139, 111);
+            this.processed_G.Size = new System.Drawing.Size(104, 89);
             this.processed_G.TabIndex = 16;
             this.processed_G.TabStop = false;
             // 
             // processed_R
             // 
-            this.processed_R.Location = new System.Drawing.Point(552, 626);
-            this.processed_R.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.processed_R.Location = new System.Drawing.Point(414, 501);
+            this.processed_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.processed_R.Name = "processed_R";
-            this.processed_R.Size = new System.Drawing.Size(139, 111);
+            this.processed_R.Size = new System.Drawing.Size(104, 89);
             this.processed_R.TabIndex = 15;
             this.processed_R.TabStop = false;
             // 
             // grayscale
             // 
-            this.grayscale.Location = new System.Drawing.Point(355, 32);
-            this.grayscale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grayscale.Location = new System.Drawing.Point(266, 43);
+            this.grayscale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grayscale.Name = "grayscale";
-            this.grayscale.Size = new System.Drawing.Size(99, 40);
+            this.grayscale.Size = new System.Drawing.Size(74, 32);
             this.grayscale.TabIndex = 18;
             this.grayscale.Text = "Grayscale";
             this.grayscale.UseVisualStyleBackColor = true;
@@ -247,10 +253,10 @@
             // 
             // invert
             // 
-            this.invert.Location = new System.Drawing.Point(459, 32);
-            this.invert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.invert.Location = new System.Drawing.Point(344, 43);
+            this.invert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.invert.Name = "invert";
-            this.invert.Size = new System.Drawing.Size(99, 40);
+            this.invert.Size = new System.Drawing.Size(74, 32);
             this.invert.TabIndex = 19;
             this.invert.Text = "Invert";
             this.invert.UseVisualStyleBackColor = true;
@@ -258,18 +264,16 @@
             // 
             // detial
             // 
-            this.detial.Location = new System.Drawing.Point(1056, 382);
-            this.detial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.detial.Location = new System.Drawing.Point(792, 306);
             this.detial.Name = "detial";
-            this.detial.Size = new System.Drawing.Size(461, 355);
+            this.detial.Size = new System.Drawing.Size(346, 284);
             this.detial.TabIndex = 20;
             // 
             // show_detial
             // 
-            this.show_detial.Location = new System.Drawing.Point(1059, 350);
-            this.show_detial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.show_detial.Location = new System.Drawing.Point(794, 280);
             this.show_detial.Name = "show_detial";
-            this.show_detial.Size = new System.Drawing.Size(100, 29);
+            this.show_detial.Size = new System.Drawing.Size(75, 23);
             this.show_detial.TabIndex = 21;
             this.show_detial.Text = "show_detial";
             this.show_detial.UseVisualStyleBackColor = true;
@@ -277,10 +281,10 @@
             // 
             // retro
             // 
-            this.retro.Location = new System.Drawing.Point(667, 32);
-            this.retro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.retro.Location = new System.Drawing.Point(501, 43);
+            this.retro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.retro.Name = "retro";
-            this.retro.Size = new System.Drawing.Size(99, 40);
+            this.retro.Size = new System.Drawing.Size(74, 32);
             this.retro.TabIndex = 23;
             this.retro.Text = "Retro";
             this.retro.UseVisualStyleBackColor = true;
@@ -288,42 +292,66 @@
             // 
             // medium
             // 
-            this.medium.Location = new System.Drawing.Point(564, 14);
-            this.medium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.medium.Location = new System.Drawing.Point(423, 11);
+            this.medium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.medium.Name = "medium";
-            this.medium.Size = new System.Drawing.Size(99, 40);
+            this.medium.Size = new System.Drawing.Size(74, 32);
             this.medium.TabIndex = 22;
-            this.medium.Text = "中值模糊化";
+            this.medium.Text = "Medium";
             this.medium.UseVisualStyleBackColor = true;
             this.medium.Click += new System.EventHandler(this.medium_Click);
             // 
             // average
             // 
-            this.average.Location = new System.Drawing.Point(564, 54);
-            this.average.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.average.Location = new System.Drawing.Point(423, 43);
+            this.average.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.average.Name = "average";
-            this.average.Size = new System.Drawing.Size(99, 40);
+            this.average.Size = new System.Drawing.Size(74, 32);
             this.average.TabIndex = 24;
-            this.average.Text = "平均模糊化";
+            this.average.Text = "Average";
             this.average.UseVisualStyleBackColor = true;
             this.average.Click += new System.EventHandler(this.average_Click);
             // 
             // priority
             // 
-            this.priority.Location = new System.Drawing.Point(564, 94);
-            this.priority.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.priority.Location = new System.Drawing.Point(423, 75);
+            this.priority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priority.Name = "priority";
-            this.priority.Size = new System.Drawing.Size(99, 40);
+            this.priority.Size = new System.Drawing.Size(74, 32);
             this.priority.TabIndex = 25;
-            this.priority.Text = "權重模糊化";
+            this.priority.Text = "Priority";
             this.priority.UseVisualStyleBackColor = true;
             this.priority.Click += new System.EventHandler(this.priority_Click);
             // 
+            // Sobel
+            // 
+            this.Sobel.Location = new System.Drawing.Point(579, 44);
+            this.Sobel.Margin = new System.Windows.Forms.Padding(2);
+            this.Sobel.Name = "Sobel";
+            this.Sobel.Size = new System.Drawing.Size(74, 32);
+            this.Sobel.TabIndex = 26;
+            this.Sobel.Text = "Sobel";
+            this.Sobel.UseVisualStyleBackColor = true;
+            this.Sobel.Click += new System.EventHandler(this.Sobel_Click);
+            // 
+            // laplacian
+            // 
+            this.laplacian.Location = new System.Drawing.Point(658, 43);
+            this.laplacian.Margin = new System.Windows.Forms.Padding(2);
+            this.laplacian.Name = "laplacian";
+            this.laplacian.Size = new System.Drawing.Size(74, 32);
+            this.laplacian.TabIndex = 27;
+            this.laplacian.Text = "Laplacian";
+            this.laplacian.UseVisualStyleBackColor = true;
+            this.laplacian.Click += new System.EventHandler(this.laplacian_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 762);
+            this.ClientSize = new System.Drawing.Size(1167, 610);
+            this.Controls.Add(this.laplacian);
+            this.Controls.Add(this.Sobel);
             this.Controls.Add(this.priority);
             this.Controls.Add(this.average);
             this.Controls.Add(this.retro);
@@ -350,7 +378,7 @@
             this.Controls.Add(this.origin_picture);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Open);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "UI";
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).EndInit();
@@ -394,6 +422,8 @@
         private System.Windows.Forms.Button medium;
         private System.Windows.Forms.Button average;
         private System.Windows.Forms.Button priority;
+        private System.Windows.Forms.Button Sobel;
+        private System.Windows.Forms.Button laplacian;
     }
 }
 

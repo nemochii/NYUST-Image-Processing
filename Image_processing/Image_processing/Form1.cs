@@ -60,7 +60,7 @@ namespace Image_processing
                 img.Save(save.FileName + ".bmp", System.Drawing.Imaging.ImageFormat.Bmp);
             }
         }
-
+        
         private void origin_Click(object sender, EventArgs e)
         {
             try
@@ -286,6 +286,97 @@ namespace Image_processing
                     img.SetPixel(x, y, Color.FromArgb(mr / 25, mg / 25, mb / 25));
                 }
             }
+            processed_picture.Image = img;
+        }
+
+        private void Sobel_Click(object sender, EventArgs e)
+        {
+            Bitmap sobel = new Bitmap(img.Width, img.Height);
+
+            for (int x = 1; x < img.Width - 1; x++)
+            {
+                for (int y = 1; y < img.Height - 1; y++)
+                {
+                    int vr = 0, vg = 0, vb = 0, hr = 0, hg = 0, hb = 0;
+                    int[] hs = new int[9] { -1, -2, -1, 0, 0, 0, 1, 2, 1 };
+                    int[] vs = new int[9] { -1, 0, 1, -2, 0, 2, -1, 0, 1 };
+                    int pos = 0;
+
+                    for (int mx = -1; mx < 2; mx++)
+                    {
+                        for (int my = -1; my < 2; my++)
+                        {
+                            Color color = img.GetPixel(x + mx, y + my);
+                            int red = color.R;
+                            int green = color.G;
+                            int blue = color.B;
+
+                            vr += red * vs[pos];
+                            vg += green * vs[pos];
+                            vb += blue * vs[pos];
+
+                            hr += red * hs[pos];
+                            hg += green * hs[pos];
+                            hb += blue * hs[pos];
+
+                            pos++;
+                        }
+                    }
+
+                    int s_red = (int)Math.Sqrt(vr * vr + hr * hr) > 255 ? 255 : (int)Math.Sqrt(vr * vr + hr * hr);
+                    int s_green = (int)Math.Sqrt(vg * vg + hg * hg) > 255 ? 255 : (int)Math.Sqrt(vg * vg + hg * hg);
+                    int s_blue = (int)Math.Sqrt(vb * vb + hb * hb) > 255 ? 255 : (int)Math.Sqrt(vb * vb + hb * hb);
+
+                    sobel.SetPixel(x, y, Color.FromArgb(s_red, s_green, s_blue));
+                }
+            }
+            img = sobel;
+            processed_picture.Image = img;
+        }
+
+        private int big(int i)
+        {
+            if (i > 255) { i = 255; }
+            else if (i < 0) { i = 0; }
+            return i;
+        }
+
+        private void laplacian_Click(object sender, EventArgs e)
+        {
+            Bitmap laplacian = new Bitmap(img.Width, img.Height);
+
+            for (int x = 1; x < img.Width - 1; x++)
+            {
+                for (int y = 1; y < img.Height - 1; y++)
+                {
+                    int mr = 0, mg = 0, mb = 0;
+                    int[] m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 };
+                    int pos = 0;
+
+                    for (int mx = -1; mx < 2; mx++)
+                    {
+                        for (int my = -1; my < 2; my++)
+                        {
+                            Color color = img.GetPixel(x + mx, y + my);
+                            int red = color.R;
+                            int green = color.G;
+                            int blue = color.B;
+
+                            mr += red * m[pos];
+                            mg += green * m[pos];
+                            mb += blue * m[pos];
+                            pos++;
+                        }
+                    }
+
+                    int rr = big(mr);
+                    int gg = big(mg);
+                    int bb = big(mb);
+
+                    laplacian.SetPixel(x, y, Color.FromArgb(rr, gg, bb));
+                }
+            }
+            img = laplacian;
             processed_picture.Image = img;
         }
     }
