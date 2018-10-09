@@ -56,6 +56,7 @@
             this.priority = new System.Windows.Forms.Button();
             this.Sobel = new System.Windows.Forms.Button();
             this.laplacian = new System.Windows.Forms.Button();
+            this.comboBox_laplacian = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -69,7 +70,7 @@
             // Open
             // 
             this.Open.Location = new System.Drawing.Point(30, 43);
-            this.Open.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Open.Margin = new System.Windows.Forms.Padding(2);
             this.Open.Name = "Open";
             this.Open.Size = new System.Drawing.Size(74, 32);
             this.Open.TabIndex = 0;
@@ -80,7 +81,7 @@
             // Save
             // 
             this.Save.Location = new System.Drawing.Point(109, 43);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(74, 32);
             this.Save.TabIndex = 1;
@@ -91,7 +92,7 @@
             // origin_picture
             // 
             this.origin_picture.Location = new System.Drawing.Point(30, 110);
-            this.origin_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_picture.Margin = new System.Windows.Forms.Padding(2);
             this.origin_picture.Name = "origin_picture";
             this.origin_picture.Size = new System.Drawing.Size(347, 374);
             this.origin_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +102,7 @@
             // processed_picture
             // 
             this.processed_picture.Location = new System.Drawing.Point(414, 110);
-            this.processed_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_picture.Margin = new System.Windows.Forms.Padding(2);
             this.processed_picture.Name = "processed_picture";
             this.processed_picture.Size = new System.Drawing.Size(347, 374);
             this.processed_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +132,7 @@
             // origin
             // 
             this.origin.Location = new System.Drawing.Point(188, 43);
-            this.origin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin.Margin = new System.Windows.Forms.Padding(2);
             this.origin.Name = "origin";
             this.origin.Size = new System.Drawing.Size(74, 32);
             this.origin.TabIndex = 6;
@@ -142,7 +143,7 @@
             // width
             // 
             this.width.Location = new System.Drawing.Point(961, 26);
-            this.width.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.width.Margin = new System.Windows.Forms.Padding(2);
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(84, 22);
             this.width.TabIndex = 7;
@@ -150,7 +151,7 @@
             // height
             // 
             this.height.Location = new System.Drawing.Point(961, 51);
-            this.height.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.height.Margin = new System.Windows.Forms.Padding(2);
             this.height.Name = "height";
             this.height.Size = new System.Drawing.Size(84, 22);
             this.height.TabIndex = 8;
@@ -158,7 +159,7 @@
             // resize
             // 
             this.resize.Location = new System.Drawing.Point(1056, 26);
-            this.resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resize.Margin = new System.Windows.Forms.Padding(2);
             this.resize.Name = "resize";
             this.resize.Size = new System.Drawing.Size(44, 45);
             this.resize.TabIndex = 9;
@@ -189,7 +190,7 @@
             // origin_R
             // 
             this.origin_R.Location = new System.Drawing.Point(30, 501);
-            this.origin_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_R.Margin = new System.Windows.Forms.Padding(2);
             this.origin_R.Name = "origin_R";
             this.origin_R.Size = new System.Drawing.Size(104, 89);
             this.origin_R.TabIndex = 12;
@@ -198,7 +199,7 @@
             // origin_G
             // 
             this.origin_G.Location = new System.Drawing.Point(152, 501);
-            this.origin_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_G.Margin = new System.Windows.Forms.Padding(2);
             this.origin_G.Name = "origin_G";
             this.origin_G.Size = new System.Drawing.Size(104, 89);
             this.origin_G.TabIndex = 13;
@@ -207,7 +208,7 @@
             // origin_B
             // 
             this.origin_B.Location = new System.Drawing.Point(274, 501);
-            this.origin_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_B.Margin = new System.Windows.Forms.Padding(2);
             this.origin_B.Name = "origin_B";
             this.origin_B.Size = new System.Drawing.Size(104, 89);
             this.origin_B.TabIndex = 14;
@@ -216,7 +217,7 @@
             // processed_B
             // 
             this.processed_B.Location = new System.Drawing.Point(658, 501);
-            this.processed_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_B.Margin = new System.Windows.Forms.Padding(2);
             this.processed_B.Name = "processed_B";
             this.processed_B.Size = new System.Drawing.Size(104, 89);
             this.processed_B.TabIndex = 17;
@@ -225,7 +226,7 @@
             // processed_G
             // 
             this.processed_G.Location = new System.Drawing.Point(536, 501);
-            this.processed_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_G.Margin = new System.Windows.Forms.Padding(2);
             this.processed_G.Name = "processed_G";
             this.processed_G.Size = new System.Drawing.Size(104, 89);
             this.processed_G.TabIndex = 16;
@@ -234,7 +235,7 @@
             // processed_R
             // 
             this.processed_R.Location = new System.Drawing.Point(414, 501);
-            this.processed_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_R.Margin = new System.Windows.Forms.Padding(2);
             this.processed_R.Name = "processed_R";
             this.processed_R.Size = new System.Drawing.Size(104, 89);
             this.processed_R.TabIndex = 15;
@@ -243,7 +244,7 @@
             // grayscale
             // 
             this.grayscale.Location = new System.Drawing.Point(266, 43);
-            this.grayscale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grayscale.Margin = new System.Windows.Forms.Padding(2);
             this.grayscale.Name = "grayscale";
             this.grayscale.Size = new System.Drawing.Size(74, 32);
             this.grayscale.TabIndex = 18;
@@ -254,7 +255,7 @@
             // invert
             // 
             this.invert.Location = new System.Drawing.Point(344, 43);
-            this.invert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.invert.Margin = new System.Windows.Forms.Padding(2);
             this.invert.Name = "invert";
             this.invert.Size = new System.Drawing.Size(74, 32);
             this.invert.TabIndex = 19;
@@ -282,7 +283,7 @@
             // retro
             // 
             this.retro.Location = new System.Drawing.Point(501, 43);
-            this.retro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.retro.Margin = new System.Windows.Forms.Padding(2);
             this.retro.Name = "retro";
             this.retro.Size = new System.Drawing.Size(74, 32);
             this.retro.TabIndex = 23;
@@ -293,7 +294,7 @@
             // medium
             // 
             this.medium.Location = new System.Drawing.Point(423, 11);
-            this.medium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.medium.Margin = new System.Windows.Forms.Padding(2);
             this.medium.Name = "medium";
             this.medium.Size = new System.Drawing.Size(74, 32);
             this.medium.TabIndex = 22;
@@ -304,7 +305,7 @@
             // average
             // 
             this.average.Location = new System.Drawing.Point(423, 43);
-            this.average.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.average.Margin = new System.Windows.Forms.Padding(2);
             this.average.Name = "average";
             this.average.Size = new System.Drawing.Size(74, 32);
             this.average.TabIndex = 24;
@@ -315,7 +316,7 @@
             // priority
             // 
             this.priority.Location = new System.Drawing.Point(423, 75);
-            this.priority.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.priority.Margin = new System.Windows.Forms.Padding(2);
             this.priority.Name = "priority";
             this.priority.Size = new System.Drawing.Size(74, 32);
             this.priority.TabIndex = 25;
@@ -336,20 +337,33 @@
             // 
             // laplacian
             // 
-            this.laplacian.Location = new System.Drawing.Point(658, 43);
+            this.laplacian.Location = new System.Drawing.Point(1026, 110);
             this.laplacian.Margin = new System.Windows.Forms.Padding(2);
             this.laplacian.Name = "laplacian";
-            this.laplacian.Size = new System.Drawing.Size(74, 32);
+            this.laplacian.Size = new System.Drawing.Size(74, 20);
             this.laplacian.TabIndex = 27;
             this.laplacian.Text = "Laplacian";
             this.laplacian.UseVisualStyleBackColor = true;
             this.laplacian.Click += new System.EventHandler(this.laplacian_Click);
+            // 
+            // comboBox_laplacian
+            // 
+            this.comboBox_laplacian.FormattingEnabled = true;
+            this.comboBox_laplacian.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox_laplacian.Location = new System.Drawing.Point(925, 110);
+            this.comboBox_laplacian.Name = "comboBox_laplacian";
+            this.comboBox_laplacian.Size = new System.Drawing.Size(84, 20);
+            this.comboBox_laplacian.TabIndex = 28;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 610);
+            this.Controls.Add(this.comboBox_laplacian);
             this.Controls.Add(this.laplacian);
             this.Controls.Add(this.Sobel);
             this.Controls.Add(this.priority);
@@ -378,7 +392,7 @@
             this.Controls.Add(this.origin_picture);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Open);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "UI";
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).EndInit();
@@ -424,6 +438,7 @@
         private System.Windows.Forms.Button priority;
         private System.Windows.Forms.Button Sobel;
         private System.Windows.Forms.Button laplacian;
+        private System.Windows.Forms.ComboBox comboBox_laplacian;
     }
 }
 

@@ -344,13 +344,26 @@ namespace Image_processing
         private void laplacian_Click(object sender, EventArgs e)
         {
             Bitmap laplacian = new Bitmap(img.Width, img.Height);
+            int[] m = new int[9];
+
+            switch (comboBox_laplacian.Text)
+            {
+                case "1":
+                    m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 };
+                    break;
+                case "2":
+                    m = new int[9] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
+                    break;
+                case "3":
+                    m = new int[9] { 1, -2, 1, -2, 4, -2, 1, -2, -1 };
+                    break;
+            }
 
             for (int x = 1; x < img.Width - 1; x++)
             {
                 for (int y = 1; y < img.Height - 1; y++)
                 {
                     int mr = 0, mg = 0, mb = 0;
-                    int[] m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 };
                     int pos = 0;
 
                     for (int mx = -1; mx < 2; mx++)
