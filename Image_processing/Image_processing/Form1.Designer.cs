@@ -267,7 +267,7 @@
             // show_detial
             // 
             this.show_detial.Location = new System.Drawing.Point(1059, 350);
-            this.show_detial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.show_detial.Margin = new System.Windows.Forms.Padding(4);
             this.show_detial.Name = "show_detial";
             this.show_detial.Size = new System.Drawing.Size(100, 29);
             this.show_detial.TabIndex = 21;
