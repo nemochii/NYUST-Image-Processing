@@ -14,13 +14,13 @@ namespace Image_processing
 
             switch (Global.chose_laplacian)
             {
-                case "1":
+                case "Matrix_1":
                     m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 };
                     break;
-                case "2":
+                case "Matrix_2":
                     m = new int[9] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
                     break;
-                case "3":
+                case "Matrix_3":
                     m = new int[9] { 1, -2, 1, -2, 4, -2, 1, -2, -1 };
                     break;
             }

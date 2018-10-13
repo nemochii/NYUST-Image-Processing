@@ -313,14 +313,14 @@
             // comboBox_laplacian
             // 
             this.comboBox_laplacian.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "3"});
+            "Matrix_1",
+            "Matrix_2",
+            "Matrix_3"});
             this.comboBox_laplacian.FormattingEnabled = true;
             this.comboBox_laplacian.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "Matrix_1",
+            "Matrix_2",
+            "Matrix_3"});
             this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
             this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_laplacian.Name = "comboBox_laplacian";
