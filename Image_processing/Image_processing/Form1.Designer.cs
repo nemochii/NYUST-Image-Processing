@@ -287,7 +287,7 @@
             this.retro.Text = "Retro";
             this.retro.UseVisualStyleBackColor = true;
             this.retro.Click += new System.EventHandler(this.retro_Click);
-            //
+            // 
             // sobel
             // 
             this.sobel.Location = new System.Drawing.Point(668, 55);
@@ -301,7 +301,7 @@
             // 
             // laplacian
             // 
-            this.laplacian.Location = new System.Drawing.Point(1368, 138);
+            this.laplacian.Location = new System.Drawing.Point(1368, 136);
             this.laplacian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.laplacian.Name = "laplacian";
             this.laplacian.Size = new System.Drawing.Size(99, 25);
@@ -316,6 +316,7 @@
             "Matrix_1",
             "Matrix_2",
             "Matrix_3"});
+            this.comboBox_laplacian.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_laplacian.FormattingEnabled = true;
             this.comboBox_laplacian.Items.AddRange(new object[] {
             "Matrix_1",
@@ -344,6 +345,7 @@
             "Medium",
             "Average",
             "Priority"});
+            this.comboBox1_fuzzy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1_fuzzy.FormattingEnabled = true;
             this.comboBox1_fuzzy.Items.AddRange(new object[] {
             "Medium",

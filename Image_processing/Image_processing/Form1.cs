@@ -16,6 +16,7 @@ namespace Image_processing
         public Form1()
         {
             InitializeComponent();
+            comboBox_laplacian.SelectedIndex = comboBox1_fuzzy.SelectedIndex = 0;
         }
 
         static Bitmap img_origin = new Bitmap(1, 1);
@@ -98,7 +99,7 @@ namespace Image_processing
         {
             String s = "";
 
-            for (int x=0; x<Global.img.Width; x++)
+            for (int x = 0; x < Global.img.Width; x++)
             {
                 for (int y = 0; y < Global.img.Height; y++)
                 {
