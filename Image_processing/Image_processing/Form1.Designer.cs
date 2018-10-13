@@ -268,13 +268,8 @@
             // 
             // show_detial
             // 
-<<<<<<< HEAD
-            this.show_detial.Location = new System.Drawing.Point(1049, 348);
-            this.show_detial.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-=======
             this.show_detial.Location = new System.Drawing.Point(1059, 348);
             this.show_detial.Margin = new System.Windows.Forms.Padding(5);
->>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.show_detial.Name = "show_detial";
             this.show_detial.Size = new System.Drawing.Size(100, 29);
             this.show_detial.TabIndex = 21;
@@ -284,11 +279,7 @@
             // 
             // retro
             // 
-<<<<<<< HEAD
-            this.retro.Location = new System.Drawing.Point(668, 54);
-=======
             this.retro.Location = new System.Drawing.Point(564, 54);
->>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.retro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.retro.Name = "retro";
             this.retro.Size = new System.Drawing.Size(99, 40);
@@ -296,52 +287,7 @@
             this.retro.Text = "Retro";
             this.retro.UseVisualStyleBackColor = true;
             this.retro.Click += new System.EventHandler(this.retro_Click);
-            // 
-<<<<<<< HEAD
-            // medium
-            // 
-            this.medium.Location = new System.Drawing.Point(564, 14);
-            this.medium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.medium.Name = "medium";
-            this.medium.Size = new System.Drawing.Size(99, 40);
-            this.medium.TabIndex = 22;
-            this.medium.Text = "Medium";
-            this.medium.UseVisualStyleBackColor = true;
-            this.medium.Click += new System.EventHandler(this.medium_Click);
-            // 
-            // average
-            // 
-            this.average.Location = new System.Drawing.Point(564, 54);
-            this.average.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.average.Name = "average";
-            this.average.Size = new System.Drawing.Size(99, 40);
-            this.average.TabIndex = 24;
-            this.average.Text = "Average";
-            this.average.UseVisualStyleBackColor = true;
-            this.average.Click += new System.EventHandler(this.average_Click);
-            // 
-            // priority
-            // 
-            this.priority.Location = new System.Drawing.Point(564, 94);
-            this.priority.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.priority.Name = "priority";
-            this.priority.Size = new System.Drawing.Size(99, 40);
-            this.priority.TabIndex = 25;
-            this.priority.Text = "Priority";
-            this.priority.UseVisualStyleBackColor = true;
-            this.priority.Click += new System.EventHandler(this.priority_Click);
-            // 
-            // Sobel
-            // 
-            this.Sobel.Location = new System.Drawing.Point(772, 55);
-            this.Sobel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Sobel.Name = "Sobel";
-            this.Sobel.Size = new System.Drawing.Size(99, 40);
-            this.Sobel.TabIndex = 26;
-            this.Sobel.Text = "Sobel";
-            this.Sobel.UseVisualStyleBackColor = true;
-            this.Sobel.Click += new System.EventHandler(this.Sobel_Click);
-=======
+            //
             // sobel
             // 
             this.sobel.Location = new System.Drawing.Point(668, 55);
@@ -352,7 +298,6 @@
             this.sobel.Text = "Sobel";
             this.sobel.UseVisualStyleBackColor = true;
             this.sobel.Click += new System.EventHandler(this.sobel_Click);
->>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             // 
             // laplacian
             // 
@@ -373,19 +318,11 @@
             "Matrix_3"});
             this.comboBox_laplacian.FormattingEnabled = true;
             this.comboBox_laplacian.Items.AddRange(new object[] {
-<<<<<<< HEAD
-            "1",
-            "2",
-            "3"});
-            this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
-            this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             "Matrix_1",
             "Matrix_2",
             "Matrix_3"});
             this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
             this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
->>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.comboBox_laplacian.Name = "comboBox_laplacian";
             this.comboBox_laplacian.Size = new System.Drawing.Size(111, 23);
             this.comboBox_laplacian.TabIndex = 28;
@@ -423,11 +360,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 762);
-<<<<<<< HEAD
-=======
             this.Controls.Add(this.comboBox1_fuzzy);
             this.Controls.Add(this.fuzzy);
->>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.Controls.Add(this.comboBox_laplacian);
             this.Controls.Add(this.laplacian);
             this.Controls.Add(this.sobel);
