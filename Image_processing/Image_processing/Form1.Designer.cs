@@ -51,12 +51,11 @@
             this.detial = new System.Windows.Forms.Label();
             this.show_detial = new System.Windows.Forms.Button();
             this.retro = new System.Windows.Forms.Button();
-            this.medium = new System.Windows.Forms.Button();
-            this.average = new System.Windows.Forms.Button();
-            this.priority = new System.Windows.Forms.Button();
-            this.Sobel = new System.Windows.Forms.Button();
+            this.sobel = new System.Windows.Forms.Button();
             this.laplacian = new System.Windows.Forms.Button();
             this.comboBox_laplacian = new System.Windows.Forms.ComboBox();
+            this.fuzzy = new System.Windows.Forms.Button();
+            this.comboBox1_fuzzy = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -269,8 +268,13 @@
             // 
             // show_detial
             // 
+<<<<<<< HEAD
             this.show_detial.Location = new System.Drawing.Point(1049, 348);
             this.show_detial.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+=======
+            this.show_detial.Location = new System.Drawing.Point(1059, 348);
+            this.show_detial.Margin = new System.Windows.Forms.Padding(5);
+>>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.show_detial.Name = "show_detial";
             this.show_detial.Size = new System.Drawing.Size(100, 29);
             this.show_detial.TabIndex = 21;
@@ -280,7 +284,11 @@
             // 
             // retro
             // 
+<<<<<<< HEAD
             this.retro.Location = new System.Drawing.Point(668, 54);
+=======
+            this.retro.Location = new System.Drawing.Point(564, 54);
+>>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.retro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.retro.Name = "retro";
             this.retro.Size = new System.Drawing.Size(99, 40);
@@ -289,6 +297,7 @@
             this.retro.UseVisualStyleBackColor = true;
             this.retro.Click += new System.EventHandler(this.retro_Click);
             // 
+<<<<<<< HEAD
             // medium
             // 
             this.medium.Location = new System.Drawing.Point(564, 14);
@@ -332,6 +341,18 @@
             this.Sobel.Text = "Sobel";
             this.Sobel.UseVisualStyleBackColor = true;
             this.Sobel.Click += new System.EventHandler(this.Sobel_Click);
+=======
+            // sobel
+            // 
+            this.sobel.Location = new System.Drawing.Point(668, 55);
+            this.sobel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sobel.Name = "sobel";
+            this.sobel.Size = new System.Drawing.Size(99, 40);
+            this.sobel.TabIndex = 26;
+            this.sobel.Text = "Sobel";
+            this.sobel.UseVisualStyleBackColor = true;
+            this.sobel.Click += new System.EventHandler(this.sobel_Click);
+>>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             // 
             // laplacian
             // 
@@ -346,29 +367,71 @@
             // 
             // comboBox_laplacian
             // 
+            this.comboBox_laplacian.AutoCompleteCustomSource.AddRange(new string[] {
+            "Matrix_1",
+            "Matrix_2",
+            "Matrix_3"});
             this.comboBox_laplacian.FormattingEnabled = true;
             this.comboBox_laplacian.Items.AddRange(new object[] {
+<<<<<<< HEAD
             "1",
             "2",
             "3"});
             this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
             this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            "Matrix_1",
+            "Matrix_2",
+            "Matrix_3"});
+            this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
+            this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.comboBox_laplacian.Name = "comboBox_laplacian";
             this.comboBox_laplacian.Size = new System.Drawing.Size(111, 23);
             this.comboBox_laplacian.TabIndex = 28;
+            // 
+            // fuzzy
+            // 
+            this.fuzzy.Location = new System.Drawing.Point(1368, 183);
+            this.fuzzy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fuzzy.Name = "fuzzy";
+            this.fuzzy.Size = new System.Drawing.Size(99, 25);
+            this.fuzzy.TabIndex = 29;
+            this.fuzzy.Text = "Fuzzy";
+            this.fuzzy.UseVisualStyleBackColor = true;
+            this.fuzzy.Click += new System.EventHandler(this.fuzzy_Click);
+            // 
+            // comboBox1_fuzzy
+            // 
+            this.comboBox1_fuzzy.AutoCompleteCustomSource.AddRange(new string[] {
+            "Medium",
+            "Average",
+            "Priority"});
+            this.comboBox1_fuzzy.FormattingEnabled = true;
+            this.comboBox1_fuzzy.Items.AddRange(new object[] {
+            "Medium",
+            "Average",
+            "Priority"});
+            this.comboBox1_fuzzy.Location = new System.Drawing.Point(1233, 185);
+            this.comboBox1_fuzzy.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1_fuzzy.Name = "comboBox1_fuzzy";
+            this.comboBox1_fuzzy.Size = new System.Drawing.Size(111, 23);
+            this.comboBox1_fuzzy.TabIndex = 30;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 762);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.comboBox1_fuzzy);
+            this.Controls.Add(this.fuzzy);
+>>>>>>> 0c060d8f3971e09989070e92c40c4224356cba4b
             this.Controls.Add(this.comboBox_laplacian);
             this.Controls.Add(this.laplacian);
-            this.Controls.Add(this.Sobel);
-            this.Controls.Add(this.priority);
-            this.Controls.Add(this.average);
+            this.Controls.Add(this.sobel);
             this.Controls.Add(this.retro);
-            this.Controls.Add(this.medium);
             this.Controls.Add(this.show_detial);
             this.Controls.Add(this.detial);
             this.Controls.Add(this.invert);
@@ -432,12 +495,11 @@
         private System.Windows.Forms.Label detial;
         private System.Windows.Forms.Button show_detial;
         private System.Windows.Forms.Button retro;
-        private System.Windows.Forms.Button medium;
-        private System.Windows.Forms.Button average;
-        private System.Windows.Forms.Button priority;
-        private System.Windows.Forms.Button Sobel;
+        private System.Windows.Forms.Button sobel;
         private System.Windows.Forms.Button laplacian;
         private System.Windows.Forms.ComboBox comboBox_laplacian;
+        private System.Windows.Forms.Button fuzzy;
+        private System.Windows.Forms.ComboBox comboBox1_fuzzy;
     }
 }
 
