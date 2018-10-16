@@ -158,6 +158,11 @@ namespace Image_processing
                     case 6:
                         Fuzzy.Function(p, rgb, offset);
                         break;
+                    case 7:
+                        Sharpen.Function(p, rgb, offset, img_origin, bpdata);
+                        break;
+                    case 8:
+                        break;
                 }
             }
             Global.img.UnlockBits(bpdata);
@@ -200,6 +205,18 @@ namespace Image_processing
         {
             Global.chose_fuzzy = comboBox1_fuzzy.Text;
             processed_picture.Image = point_all(6);
+            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+        }
+
+        private void sharpen_Click(object sender, EventArgs e)
+        {
+            processed_picture.Image = point_all(7);
+            processing_pixel.Text =  Global.img.Width + "x" + Global.img.Height;
+        }
+
+        private void H_E_Click(object sender, EventArgs e)
+        {
+            processed_picture.Image = point_all(8);
             processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
         }
     }
