@@ -3,68 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
-using System.Drawing.Imaging;
 
 namespace Image_processing
 {
     class Histogram_equalization
     {
-        //https://blog.csdn.net/guoyk1990/article/details/8108667
-
-        public static bool Balance(Bitmap srcBmp, out Bitmap dstBmp) 
+        public unsafe static void Function(byte* p, int[,,] rgb, int offset, int[,] countrgb) 
         {
-            int[] histogramArrayR = new int[256];//各个灰度级的像素数R
-            int[] histogramArrayG = new int[256];//各个灰度级的像素数G
-            int[] histogramArrayB = new int[256];//各个灰度级的像素数B
-            int[] tempArrayR = new int[256];
-            int[] tempArrayG = new int[256];
-            int[] tempArrayB = new int[256];
-            byte[] pixelMapR = new byte[256];
-            byte[] pixelMapG = new byte[256];
-            byte[] pixelMapB = new byte[256];
-            dstBmp = new Bitmap(srcBmp);
-            Rectangle rt = new Rectangle(0, 0, srcBmp.Width, srcBmp.Height);
-            BitmapData bmpData = dstBmp.LockBits(rt, ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
-            unsafe {
-                //统计各个灰度级的像素个数
-                for (int i = 0; i < bmpData.Height; i++) {
-                    byte* ptr = (byte*)bmpData.Scan0 + i * bmpData.Stride;
-                    for (int j = 0; j < bmpData.Width; j++) {
-                        histogramArrayB[*(ptr + j * 3)]++;
-                        histogramArrayG[*(ptr + j * 3 + 1)]++;
-                        histogramArrayR[*(ptr + j * 3 + 2)]++;
-                    }
-                }
-                //计算各个灰度级的累计分布函数
-                for (int i = 0; i < 256; i++) {
-                    if (i != 0) {
-                        tempArrayB[i] = tempArrayB[i - 1] + histogramArrayB[i];
-                        tempArrayG[i] = tempArrayG[i - 1] + histogramArrayG[i];
-                        tempArrayR[i] = tempArrayR[i - 1] + histogramArrayR[i];
-                    }
-                    else {
-                        tempArrayB[0] = histogramArrayB[0];
-                        tempArrayG[0] = histogramArrayG[0];
-                        tempArrayR[0] = histogramArrayR[0];
-                    }
-                    //计算累计概率函数，并将值放缩至0~255范围内
-                    pixelMapB[i] = (byte)(255.0 * tempArrayB[i] / (bmpData.Width * bmpData.Height) + 0.5);//加0.5为了四舍五入取整
-                    pixelMapG[i] = (byte)(255.0 * tempArrayG[i] / (bmpData.Width * bmpData.Height) + 0.5);
-                    pixelMapR[i] = (byte)(255.0 * tempArrayR[i] / (bmpData.Width * bmpData.Height) + 0.5);
-                }
-                //映射转换
-                for (int i = 0; i < bmpData.Height; i++) {
-                    byte* ptr = (byte*)bmpData.Scan0 + i * bmpData.Stride;
-                    for (int j = 0; j < bmpData.Width; j++) {
-                        *(ptr + j * 3) = pixelMapB[*(ptr + j * 3)];
-                        *(ptr + j * 3 + 1) = pixelMapG[*(ptr + j * 3 + 1)];
-                        *(ptr + j * 3 + 2) = pixelMapR[*(ptr + j * 3 + 2)];
-                    }
+            int[,] accrgb = new int[3, 256];
+            int[,] Frgb = new int[3, 256];
+            int allpixel = Global.img.Width * Global.img.Height;
+
+            for (int t = 0; t < 3; t++)
+            {
+                for (int i = 0; i < 256; i++)
+                {
+                    //compute accumulation
+                    if (i != 0) { accrgb[t, i] = accrgb[t, i - 1] + countrgb[t, i]; }
+                    else { accrgb[t, 0] = countrgb[t, 0]; }
+
+                    //compute F(x) and equalization
+                    Frgb[t, i] = (byte)(255 * accrgb[t, i] / allpixel);
                 }
             }
-        dstBmp.UnlockBits(bmpData);
-        return true;
-    }
+
+            for(int y = 0; y < Global.img.Height; y++)
+            {
+                for(int x = 0; x < Global.img.Width; x++)
+                {
+                    p[2] = (byte)Frgb[0, p[2]];
+                    p[1] = (byte)Frgb[1, p[1]];
+                    p[0] = (byte)Frgb[2, p[0]];
+
+                    p += 3;
+                }
+                p += offset;
+            }
+        }
     }
 }

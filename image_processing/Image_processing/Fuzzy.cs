@@ -10,21 +10,6 @@ namespace Image_processing
     {
         public unsafe static void Function(byte* p, int[,,] rgb, int offset)
         {
-            p += Global.img.Width * 3 + offset;
-
-            switch (Global.chose_fuzzy)
-            {
-                case "Medium":
-                    medium();
-                    break;
-                case "Average":
-                    average();
-                    break;
-                case "Priority":
-                    priority();
-                    break;
-            }
-
             void medium()
             {
                 int[] r = new int[9];
@@ -33,12 +18,12 @@ namespace Image_processing
 
                 for (int y = 1; y < Global.img.Height - 1; y++)
                 {
-                    p += 3;        
+                    p += 3;
                     for (int x = 1; x < Global.img.Width - 1; x++)
                     {
                         int pos = 0;
 
-                        for(int i = -1; i < 2; i++)
+                        for (int i = -1; i < 2; i++)
                         {
                             for (int t = -1; t < 2; t++)
                             {
@@ -116,7 +101,7 @@ namespace Image_processing
                             {
                                 //int px = (x + mx) >= Global.img.Width ? x : x + mx;
                                 //int py = (y + my) >= Global.img.Height ? y : y + my;
-                                
+
                                 mr += rgb[x + mx, y + my, 0] * m[pos];
                                 mg += rgb[x + mx, y + my, 1] * m[pos];
                                 mb += rgb[x + mx, y + my, 2] * m[pos];
@@ -132,6 +117,21 @@ namespace Image_processing
                     p += 3;
                     p += offset;
                 }
+            }
+
+            p += Global.img.Width * 3 + offset;
+
+            switch (Global.chose_fuzzy)
+            {
+                case "Medium":
+                    medium();
+                    break;
+                case "Average":
+                    average();
+                    break;
+                case "Priority":
+                    priority();
+                    break;
             }
         }
     }

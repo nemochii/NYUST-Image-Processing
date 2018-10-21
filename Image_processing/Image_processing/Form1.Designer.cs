@@ -58,6 +58,12 @@
             this.comboBox1_fuzzy = new System.Windows.Forms.ComboBox();
             this.sharpen = new System.Windows.Forms.Button();
             this.H_E = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -66,14 +72,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.processed_B)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_G)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_R)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Open
             // 
-            this.Open.Location = new System.Drawing.Point(30, 43);
-            this.Open.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Open.Location = new System.Drawing.Point(40, 54);
+            this.Open.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(74, 32);
+            this.Open.Size = new System.Drawing.Size(99, 40);
             this.Open.TabIndex = 0;
             this.Open.Text = "Open";
             this.Open.UseVisualStyleBackColor = true;
@@ -81,10 +93,10 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(109, 43);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save.Location = new System.Drawing.Point(145, 54);
+            this.Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(74, 32);
+            this.Save.Size = new System.Drawing.Size(99, 40);
             this.Save.TabIndex = 1;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
@@ -92,50 +104,48 @@
             // 
             // origin_picture
             // 
-            this.origin_picture.Location = new System.Drawing.Point(30, 110);
-            this.origin_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_picture.Location = new System.Drawing.Point(40, 138);
+            this.origin_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin_picture.Name = "origin_picture";
-            this.origin_picture.Size = new System.Drawing.Size(347, 374);
+            this.origin_picture.Size = new System.Drawing.Size(463, 468);
             this.origin_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.origin_picture.TabIndex = 2;
             this.origin_picture.TabStop = false;
             // 
             // processed_picture
             // 
-            this.processed_picture.Location = new System.Drawing.Point(414, 110);
-            this.processed_picture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_picture.Location = new System.Drawing.Point(552, 138);
+            this.processed_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_picture.Name = "processed_picture";
-            this.processed_picture.Size = new System.Drawing.Size(347, 374);
+            this.processed_picture.Size = new System.Drawing.Size(463, 468);
             this.processed_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.processed_picture.TabIndex = 3;
             this.processed_picture.TabStop = false;
             // 
             // origin_pixel
             // 
-            this.origin_pixel.Location = new System.Drawing.Point(302, 90);
-            this.origin_pixel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.origin_pixel.Location = new System.Drawing.Point(403, 112);
             this.origin_pixel.Name = "origin_pixel";
-            this.origin_pixel.Size = new System.Drawing.Size(75, 18);
+            this.origin_pixel.Size = new System.Drawing.Size(100, 22);
             this.origin_pixel.TabIndex = 4;
             this.origin_pixel.Text = "0x0";
             this.origin_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // processing_pixel
             // 
-            this.processing_pixel.Location = new System.Drawing.Point(686, 90);
-            this.processing_pixel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.processing_pixel.Location = new System.Drawing.Point(915, 112);
             this.processing_pixel.Name = "processing_pixel";
-            this.processing_pixel.Size = new System.Drawing.Size(75, 18);
+            this.processing_pixel.Size = new System.Drawing.Size(100, 22);
             this.processing_pixel.TabIndex = 5;
             this.processing_pixel.Text = "0x0";
             this.processing_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // origin
             // 
-            this.origin.Location = new System.Drawing.Point(188, 43);
-            this.origin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin.Location = new System.Drawing.Point(251, 54);
+            this.origin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin.Name = "origin";
-            this.origin.Size = new System.Drawing.Size(74, 32);
+            this.origin.Size = new System.Drawing.Size(99, 40);
             this.origin.TabIndex = 6;
             this.origin.Text = "Origin";
             this.origin.UseVisualStyleBackColor = true;
@@ -143,26 +153,26 @@
             // 
             // width
             // 
-            this.width.Location = new System.Drawing.Point(961, 26);
-            this.width.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.width.Location = new System.Drawing.Point(1281, 32);
+            this.width.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.width.Name = "width";
-            this.width.Size = new System.Drawing.Size(84, 22);
+            this.width.Size = new System.Drawing.Size(111, 25);
             this.width.TabIndex = 7;
             // 
             // height
             // 
-            this.height.Location = new System.Drawing.Point(961, 51);
-            this.height.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.height.Location = new System.Drawing.Point(1281, 64);
+            this.height.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.height.Name = "height";
-            this.height.Size = new System.Drawing.Size(84, 22);
+            this.height.Size = new System.Drawing.Size(111, 25);
             this.height.TabIndex = 8;
             // 
             // resize
             // 
-            this.resize.Location = new System.Drawing.Point(1056, 26);
-            this.resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resize.Location = new System.Drawing.Point(1408, 32);
+            this.resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resize.Name = "resize";
-            this.resize.Size = new System.Drawing.Size(44, 45);
+            this.resize.Size = new System.Drawing.Size(59, 56);
             this.resize.TabIndex = 9;
             this.resize.Text = "Resize";
             this.resize.UseVisualStyleBackColor = true;
@@ -170,84 +180,88 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(881, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1175, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 18);
+            this.label1.Size = new System.Drawing.Size(100, 22);
             this.label1.TabIndex = 10;
             this.label1.Text = "Width";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(881, 51);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(1175, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.Size = new System.Drawing.Size(100, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Height";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // origin_R
             // 
-            this.origin_R.Location = new System.Drawing.Point(30, 501);
-            this.origin_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_R.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.origin_R.Location = new System.Drawing.Point(40, 626);
+            this.origin_R.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin_R.Name = "origin_R";
-            this.origin_R.Size = new System.Drawing.Size(104, 89);
+            this.origin_R.Size = new System.Drawing.Size(139, 111);
             this.origin_R.TabIndex = 12;
             this.origin_R.TabStop = false;
             // 
             // origin_G
             // 
-            this.origin_G.Location = new System.Drawing.Point(152, 501);
-            this.origin_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_G.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.origin_G.Location = new System.Drawing.Point(203, 626);
+            this.origin_G.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin_G.Name = "origin_G";
-            this.origin_G.Size = new System.Drawing.Size(104, 89);
+            this.origin_G.Size = new System.Drawing.Size(139, 111);
             this.origin_G.TabIndex = 13;
             this.origin_G.TabStop = false;
             // 
             // origin_B
             // 
-            this.origin_B.Location = new System.Drawing.Point(274, 501);
-            this.origin_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.origin_B.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.origin_B.Location = new System.Drawing.Point(365, 626);
+            this.origin_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin_B.Name = "origin_B";
-            this.origin_B.Size = new System.Drawing.Size(104, 89);
+            this.origin_B.Size = new System.Drawing.Size(139, 111);
             this.origin_B.TabIndex = 14;
             this.origin_B.TabStop = false;
             // 
             // processed_B
             // 
-            this.processed_B.Location = new System.Drawing.Point(658, 501);
-            this.processed_B.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_B.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.processed_B.Location = new System.Drawing.Point(877, 626);
+            this.processed_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_B.Name = "processed_B";
-            this.processed_B.Size = new System.Drawing.Size(104, 89);
+            this.processed_B.Size = new System.Drawing.Size(139, 111);
             this.processed_B.TabIndex = 17;
             this.processed_B.TabStop = false;
             // 
             // processed_G
             // 
-            this.processed_G.Location = new System.Drawing.Point(536, 501);
-            this.processed_G.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_G.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.processed_G.Location = new System.Drawing.Point(715, 626);
+            this.processed_G.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_G.Name = "processed_G";
-            this.processed_G.Size = new System.Drawing.Size(104, 89);
+            this.processed_G.Size = new System.Drawing.Size(139, 111);
             this.processed_G.TabIndex = 16;
             this.processed_G.TabStop = false;
             // 
             // processed_R
             // 
-            this.processed_R.Location = new System.Drawing.Point(414, 501);
-            this.processed_R.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.processed_R.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.processed_R.Location = new System.Drawing.Point(552, 626);
+            this.processed_R.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_R.Name = "processed_R";
-            this.processed_R.Size = new System.Drawing.Size(104, 89);
+            this.processed_R.Size = new System.Drawing.Size(139, 111);
             this.processed_R.TabIndex = 15;
             this.processed_R.TabStop = false;
             // 
             // grayscale
             // 
-            this.grayscale.Location = new System.Drawing.Point(266, 43);
-            this.grayscale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grayscale.Location = new System.Drawing.Point(355, 54);
+            this.grayscale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grayscale.Name = "grayscale";
-            this.grayscale.Size = new System.Drawing.Size(74, 32);
+            this.grayscale.Size = new System.Drawing.Size(99, 40);
             this.grayscale.TabIndex = 18;
             this.grayscale.Text = "Grayscale";
             this.grayscale.UseVisualStyleBackColor = true;
@@ -255,10 +269,10 @@
             // 
             // invert
             // 
-            this.invert.Location = new System.Drawing.Point(344, 43);
-            this.invert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.invert.Location = new System.Drawing.Point(459, 54);
+            this.invert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.invert.Name = "invert";
-            this.invert.Size = new System.Drawing.Size(74, 32);
+            this.invert.Size = new System.Drawing.Size(99, 40);
             this.invert.TabIndex = 19;
             this.invert.Text = "Invert";
             this.invert.UseVisualStyleBackColor = true;
@@ -266,17 +280,18 @@
             // 
             // detial
             // 
-            this.detial.Location = new System.Drawing.Point(792, 306);
+            this.detial.Location = new System.Drawing.Point(1056, 382);
+            this.detial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.detial.Name = "detial";
-            this.detial.Size = new System.Drawing.Size(346, 284);
+            this.detial.Size = new System.Drawing.Size(461, 355);
             this.detial.TabIndex = 20;
             // 
             // show_detial
             // 
-            this.show_detial.Location = new System.Drawing.Point(794, 278);
-            this.show_detial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.show_detial.Location = new System.Drawing.Point(1059, 348);
+            this.show_detial.Margin = new System.Windows.Forms.Padding(5);
             this.show_detial.Name = "show_detial";
-            this.show_detial.Size = new System.Drawing.Size(75, 23);
+            this.show_detial.Size = new System.Drawing.Size(100, 29);
             this.show_detial.TabIndex = 21;
             this.show_detial.Text = "show_detial";
             this.show_detial.UseVisualStyleBackColor = true;
@@ -284,10 +299,10 @@
             // 
             // retro
             // 
-            this.retro.Location = new System.Drawing.Point(423, 43);
-            this.retro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.retro.Location = new System.Drawing.Point(564, 54);
+            this.retro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.retro.Name = "retro";
-            this.retro.Size = new System.Drawing.Size(74, 32);
+            this.retro.Size = new System.Drawing.Size(99, 40);
             this.retro.TabIndex = 23;
             this.retro.Text = "Retro";
             this.retro.UseVisualStyleBackColor = true;
@@ -295,10 +310,10 @@
             // 
             // sobel
             // 
-            this.sobel.Location = new System.Drawing.Point(501, 44);
-            this.sobel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sobel.Location = new System.Drawing.Point(668, 55);
+            this.sobel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sobel.Name = "sobel";
-            this.sobel.Size = new System.Drawing.Size(74, 32);
+            this.sobel.Size = new System.Drawing.Size(99, 40);
             this.sobel.TabIndex = 26;
             this.sobel.Text = "Sobel";
             this.sobel.UseVisualStyleBackColor = true;
@@ -306,10 +321,10 @@
             // 
             // laplacian
             // 
-            this.laplacian.Location = new System.Drawing.Point(1026, 109);
-            this.laplacian.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.laplacian.Location = new System.Drawing.Point(1368, 136);
+            this.laplacian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.laplacian.Name = "laplacian";
-            this.laplacian.Size = new System.Drawing.Size(74, 20);
+            this.laplacian.Size = new System.Drawing.Size(99, 25);
             this.laplacian.TabIndex = 27;
             this.laplacian.Text = "Laplacian";
             this.laplacian.UseVisualStyleBackColor = true;
@@ -327,17 +342,18 @@
             "Matrix_1",
             "Matrix_2",
             "Matrix_3"});
-            this.comboBox_laplacian.Location = new System.Drawing.Point(925, 110);
+            this.comboBox_laplacian.Location = new System.Drawing.Point(1233, 138);
+            this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_laplacian.Name = "comboBox_laplacian";
-            this.comboBox_laplacian.Size = new System.Drawing.Size(84, 20);
+            this.comboBox_laplacian.Size = new System.Drawing.Size(111, 23);
             this.comboBox_laplacian.TabIndex = 28;
             // 
             // fuzzy
             // 
-            this.fuzzy.Location = new System.Drawing.Point(1026, 146);
-            this.fuzzy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fuzzy.Location = new System.Drawing.Point(1368, 182);
+            this.fuzzy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fuzzy.Name = "fuzzy";
-            this.fuzzy.Size = new System.Drawing.Size(74, 20);
+            this.fuzzy.Size = new System.Drawing.Size(99, 25);
             this.fuzzy.TabIndex = 29;
             this.fuzzy.Text = "Fuzzy";
             this.fuzzy.UseVisualStyleBackColor = true;
@@ -355,17 +371,18 @@
             "Medium",
             "Average",
             "Priority"});
-            this.comboBox1_fuzzy.Location = new System.Drawing.Point(925, 148);
+            this.comboBox1_fuzzy.Location = new System.Drawing.Point(1233, 185);
+            this.comboBox1_fuzzy.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1_fuzzy.Name = "comboBox1_fuzzy";
-            this.comboBox1_fuzzy.Size = new System.Drawing.Size(84, 20);
+            this.comboBox1_fuzzy.Size = new System.Drawing.Size(111, 23);
             this.comboBox1_fuzzy.TabIndex = 30;
             // 
             // sharpen
             // 
-            this.sharpen.Location = new System.Drawing.Point(579, 44);
-            this.sharpen.Margin = new System.Windows.Forms.Padding(2);
+            this.sharpen.Location = new System.Drawing.Point(772, 55);
+            this.sharpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sharpen.Name = "sharpen";
-            this.sharpen.Size = new System.Drawing.Size(74, 32);
+            this.sharpen.Size = new System.Drawing.Size(99, 40);
             this.sharpen.TabIndex = 31;
             this.sharpen.Text = "Sharpen";
             this.sharpen.UseVisualStyleBackColor = true;
@@ -373,20 +390,80 @@
             // 
             // H_E
             // 
-            this.H_E.Location = new System.Drawing.Point(657, 44);
-            this.H_E.Margin = new System.Windows.Forms.Padding(2);
+            this.H_E.Location = new System.Drawing.Point(876, 55);
+            this.H_E.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.H_E.Name = "H_E";
-            this.H_E.Size = new System.Drawing.Size(74, 32);
+            this.H_E.Size = new System.Drawing.Size(99, 40);
             this.H_E.TabIndex = 32;
             this.H_E.Text = "H_E";
             this.H_E.UseVisualStyleBackColor = true;
             this.H_E.Click += new System.EventHandler(this.H_E_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 742);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.Location = new System.Drawing.Point(552, 742);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Green;
+            this.pictureBox3.Location = new System.Drawing.Point(203, 742);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Green;
+            this.pictureBox4.Location = new System.Drawing.Point(715, 742);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox5.Location = new System.Drawing.Point(365, 742);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox5.TabIndex = 37;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox6.Location = new System.Drawing.Point(877, 742);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(139, 15);
+            this.pictureBox6.TabIndex = 38;
+            this.pictureBox6.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 610);
+            this.ClientSize = new System.Drawing.Size(1556, 774);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.H_E);
             this.Controls.Add(this.sharpen);
             this.Controls.Add(this.comboBox1_fuzzy);
@@ -417,7 +494,7 @@
             this.Controls.Add(this.origin_picture);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Open);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "UI";
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).EndInit();
@@ -428,6 +505,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.processed_B)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_G)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_R)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,6 +548,12 @@
         private System.Windows.Forms.ComboBox comboBox1_fuzzy;
         private System.Windows.Forms.Button sharpen;
         private System.Windows.Forms.Button H_E;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

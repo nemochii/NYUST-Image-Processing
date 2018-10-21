@@ -23,6 +23,34 @@ namespace Image_processing
         static int origin_width;
         static int origin_height;
 
+        public void start_histogtam(int who, Bitmap image)
+        {
+            Bitmap[] originH = new Bitmap[3];
+            PictureBox[] picturearray = new PictureBox[3];
+
+            switch (who)
+            {
+                case 1:
+                    originH[0] = new Bitmap(origin_R.Width, origin_R.Height);
+                    originH[1] = new Bitmap(origin_G.Width, origin_G.Height);
+                    originH[2] = new Bitmap(origin_B.Width, origin_B.Height);
+                    picturearray[0] = origin_R;
+                    picturearray[1] = origin_G;
+                    picturearray[2] = origin_B;
+                    break;
+                case 2:
+                    originH[0] = new Bitmap(processed_R.Width, processed_R.Height);
+                    originH[1] = new Bitmap(processed_G.Width, processed_G.Height);
+                    originH[2] = new Bitmap(processed_B.Width, processed_B.Height);
+                    picturearray[0] = processed_R;
+                    picturearray[1] = processed_G;
+                    picturearray[2] = processed_B;
+                    break;
+            }
+
+            Draw_Histogram.Function(image, originH, picturearray);
+        }
+
         private void Open_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -39,6 +67,8 @@ namespace Image_processing
 
                 origin_width = img_origin.Width;
                 origin_height = img_origin.Height;
+
+                start_histogtam(1, img_origin);
 
                 origin_picture.Image = img_origin;
                 processed_picture.Image = null;
@@ -68,6 +98,7 @@ namespace Image_processing
             {
                 Global.img = img_origin.Clone(new Rectangle(0, 0, img_origin.Width, img_origin.Height), PixelFormat.Format24bppRgb);
                 processed_picture.Image = img_origin;
+                start_histogtam(2, img_origin);
                 width.Text = img_origin.Width.ToString();
                 height.Text = img_origin.Height.ToString();
                 processing_pixel.Text = img_origin.Width + "x" + img_origin.Height;
@@ -86,6 +117,7 @@ namespace Image_processing
                 int reheight = Int32.Parse(height.Text);
 
                 Global.img = new Bitmap(Global.img, new Size(rewidth, reheight));
+                start_histogtam(2, Global.img);
                 processed_picture.Image = Global.img;
                 processing_pixel.Text = rewidth + "x" + reheight;
             }
@@ -111,11 +143,12 @@ namespace Image_processing
             detial.Text = s;
         }
 
-        public static Bitmap point_all(int function)
+        public Bitmap point_all(int function)
         {
             BitmapData bpdata = Global.img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             IntPtr imgp = bpdata.Scan0;
             int[,,] rgb = new int[Global.img.Width, Global.img.Height, 4];
+            int[,] countrgb = new int[3, 256];
 
             int offset = bpdata.Stride - Global.img.Width * 3;
 
@@ -128,8 +161,11 @@ namespace Image_processing
                     for (int x = 0; x < Global.img.Width; x++)
                     {
                         rgb[x, y, 2] = p[0];
+                        countrgb[2, rgb[x, y, 2]]++;
                         rgb[x, y, 1] = p[1];
+                        countrgb[1, rgb[x, y, 1]]++;
                         rgb[x, y, 0] = p[2];
+                        countrgb[0, rgb[x, y, 0]]++;
                         rgb[x, y, 3] = (byte)(p[2] * 0.299 + p[1] * 0.587 + p[0] * 0.114);
 
                         p += 3;
@@ -162,10 +198,14 @@ namespace Image_processing
                         Sharpen.Function(p, rgb, offset, img_origin, bpdata);
                         break;
                     case 8:
+                        Histogram_equalization.Function(p, rgb, offset, countrgb);
                         break;
                 }
+                p = (byte*)imgp;
             }
             Global.img.UnlockBits(bpdata);
+
+            start_histogtam(2, Global.img);
 
             return Global.img;
         }

@@ -10,6 +10,13 @@ namespace Image_processing
     {
         public unsafe static void Function(byte* p, int[,,] rgb, int offset)
         {
+            int big(int i)
+            {
+                if (i > 255) { i = 255; }
+                else if (i < 0) { i = 0; }
+                return i;
+            }
+
             int[] m = new int[9];
 
             switch (Global.chose_laplacian)
@@ -48,13 +55,6 @@ namespace Image_processing
 
                             pos++;
                         }
-                    }
-
-                    int big(int i)
-                    {
-                        if (i > 255) { i = 255; }
-                        else if (i < 0) { i = 0; }
-                        return i;
                     }
 
                     p[2] = (byte)big(mr);
