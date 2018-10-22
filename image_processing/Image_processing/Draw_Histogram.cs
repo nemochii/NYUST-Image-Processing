@@ -18,7 +18,8 @@ namespace Image_processing
             int[,,] rgb = new int[image.Width, image.Height, 3];
 
             int offset = bpdata.Stride - image.Width * 3;
-            int[] maxrgb = new int[3];
+            //int[] maxrgb = new int[3];
+            int maxrgb = 0;
             int[,] countrgb = new int[3, 256];
 
             unsafe
@@ -37,7 +38,8 @@ namespace Image_processing
                         countrgb[0, rgb[x, y, 0]]++;
 
                         for (int i = 0; i < 3; i++)
-                            maxrgb[i] = countrgb[i, rgb[x, y, i]] > maxrgb[i] ? countrgb[i, rgb[x, y, i]] : maxrgb[i];
+                            //maxrgb[i] = countrgb[i, rgb[x, y, i]] > maxrgb[i] ? countrgb[i, rgb[x, y, i]] : maxrgb[i];
+                            maxrgb = countrgb[i, rgb[x, y, i]] > maxrgb ? countrgb[i, rgb[x, y, i]] : maxrgb;
 
                         p += 3;
                     }
@@ -56,7 +58,7 @@ namespace Image_processing
 
                 //equalization
                 double ratex = (picturearray[t].Width * 1.0) / (255 * 1.0);
-                double ratey = (picturearray[t].Height * 1.0) / (maxrgb[t] * 1.0);
+                double ratey = (picturearray[t].Height * 1.0) / (maxrgb * 1.0);
                 for (int i = 0; i <= picturearray[t].Width; i++)
                 {
                     x1 = i;
