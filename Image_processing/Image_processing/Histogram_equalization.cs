@@ -22,7 +22,7 @@ namespace Image_processing
                     if (i != 0) { accrgb[t, i] = accrgb[t, i - 1] + countrgb[t, i]; }
                     else { accrgb[t, 0] = countrgb[t, 0]; }
 
-                    //compute F(x) and equalization
+                    //compute F(x) and then equalization
                     Frgb[t, i] = (byte)(255 * accrgb[t, i] / allpixel);
                 }
             }

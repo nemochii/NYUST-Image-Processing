@@ -64,6 +64,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.k_means = new System.Windows.Forms.Button();
+            this.previous = new System.Windows.Forms.Button();
+            this.k_number = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -390,7 +393,7 @@
             // 
             // H_E
             // 
-            this.H_E.Location = new System.Drawing.Point(876, 55);
+            this.H_E.Location = new System.Drawing.Point(876, 54);
             this.H_E.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.H_E.Name = "H_E";
             this.H_E.Size = new System.Drawing.Size(99, 40);
@@ -453,11 +456,44 @@
             this.pictureBox6.TabIndex = 38;
             this.pictureBox6.TabStop = false;
             // 
+            // k_means
+            // 
+            this.k_means.Location = new System.Drawing.Point(1368, 230);
+            this.k_means.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.k_means.Name = "k_means";
+            this.k_means.Size = new System.Drawing.Size(99, 27);
+            this.k_means.TabIndex = 39;
+            this.k_means.Text = "K_means";
+            this.k_means.UseVisualStyleBackColor = true;
+            this.k_means.Click += new System.EventHandler(this.k_means_Click);
+            // 
+            // previous
+            // 
+            this.previous.Location = new System.Drawing.Point(1473, 30);
+            this.previous.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.previous.Name = "previous";
+            this.previous.Size = new System.Drawing.Size(71, 56);
+            this.previous.TabIndex = 40;
+            this.previous.Text = "Previous";
+            this.previous.UseVisualStyleBackColor = true;
+            this.previous.Click += new System.EventHandler(this.previous_Click);
+            // 
+            // k_number
+            // 
+            this.k_number.Location = new System.Drawing.Point(1233, 232);
+            this.k_number.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.k_number.Name = "k_number";
+            this.k_number.Size = new System.Drawing.Size(111, 25);
+            this.k_number.TabIndex = 41;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 774);
+            this.ClientSize = new System.Drawing.Size(1554, 774);
+            this.Controls.Add(this.k_number);
+            this.Controls.Add(this.previous);
+            this.Controls.Add(this.k_means);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -554,6 +590,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button k_means;
+        private System.Windows.Forms.Button previous;
+        private System.Windows.Forms.TextBox k_number;
     }
 }
 

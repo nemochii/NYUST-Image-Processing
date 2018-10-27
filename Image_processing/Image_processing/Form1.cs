@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.Collections;
 
 namespace Image_processing
 {
@@ -19,9 +20,10 @@ namespace Image_processing
             comboBox_laplacian.SelectedIndex = comboBox1_fuzzy.SelectedIndex = 0;
         }
 
-        static Bitmap img_origin = new Bitmap(1, 1);
-        static int origin_width;
-        static int origin_height;
+        Bitmap img_origin = new Bitmap(1, 1);
+        int origin_width;
+        int origin_height;
+        Stack up = new Stack();
 
         public void start_histogtam(int who, Bitmap image)
         {
@@ -143,8 +145,20 @@ namespace Image_processing
             detial.Text = s;
         }
 
-        public Bitmap point_all(int function)
+        private void previous_Click(object sender, EventArgs e)
         {
+            if (up.Count == 0) { MessageBox.Show("Now is the first step!"); }
+            else
+            {
+                Global.img = (Bitmap)up.Pop();
+                start_histogtam(2, Global.img);
+                processed_picture.Image = Global.img;
+            }
+        }
+
+        public void point_all(int function)
+        {
+            up.Push(Global.img.Clone());
             BitmapData bpdata = Global.img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             IntPtr imgp = bpdata.Scan0;
             int[,,] rgb = new int[Global.img.Width, Global.img.Height, 4];
@@ -200,6 +214,9 @@ namespace Image_processing
                     case 8:
                         Histogram_equalization.Function(p, rgb, offset, countrgb);
                         break;
+                    case 9:
+                        K_means.Function(p, rgb, offset);
+                        break;
                 }
                 p = (byte*)imgp;
             }
@@ -207,57 +224,57 @@ namespace Image_processing
 
             start_histogtam(2, Global.img);
 
-            return Global.img;
+            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            processed_picture.Image = Global.img;
         }
 
         private void grayscale_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(1);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(1);
         }
 
         private void invert_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(2);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(2);
         }
 
         private void retro_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(3);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(3);
         }
 
         private void sobel_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(4);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(4);
         }
 
         private void laplacian_Click(object sender, EventArgs e)
         {
             Global.chose_laplacian = comboBox_laplacian.Text;
-            processed_picture.Image = point_all(5);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(5);
         }
 
         private void fuzzy_Click(object sender, EventArgs e)
         {
             Global.chose_fuzzy = comboBox1_fuzzy.Text;
-            processed_picture.Image = point_all(6);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(6);
         }
 
         private void sharpen_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(7);
-            processing_pixel.Text =  Global.img.Width + "x" + Global.img.Height;
+            point_all(7);
         }
 
         private void H_E_Click(object sender, EventArgs e)
         {
-            processed_picture.Image = point_all(8);
-            processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
+            point_all(8);
+        }
+
+        private void k_means_Click(object sender, EventArgs e)
+        {
+            Global.k = Convert.ToInt32(k_number.Text);
+            if (Global.k < 2) { MessageBox.Show("K can't smaller than 2!"); }
+            else { point_all(9); }
         }
     }
 }

@@ -63,6 +63,7 @@
     <Compile Include="Grayscale.cs" />
     <Compile Include="Histogram_equalization.cs" />
     <Compile Include="Invert.cs" />
+    <Compile Include="K_means.cs" />
     <Compile Include="Laplacian.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

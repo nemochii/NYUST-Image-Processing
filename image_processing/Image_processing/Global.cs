@@ -11,5 +11,6 @@ namespace Image_processing
     {
         public static Bitmap img = new Bitmap(1, 1);
         public static string chose_laplacian, chose_fuzzy;
+        public static int k;
     }
 }
