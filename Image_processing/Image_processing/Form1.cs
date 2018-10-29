@@ -273,7 +273,7 @@ namespace Image_processing
         private void k_means_Click(object sender, EventArgs e)
         {
             Global.k = Convert.ToInt32(k_number.Text);
-            if (Global.k < 2) { MessageBox.Show("K can't smaller than 2!"); }
+            if (Global.k < 2 || Global.k > 10) { MessageBox.Show("K can't less than 2 or greater than 10!"); }
             else { point_all(9); }
         }
     }

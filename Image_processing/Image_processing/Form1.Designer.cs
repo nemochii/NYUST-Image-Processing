@@ -67,6 +67,7 @@
             this.k_means = new System.Windows.Forms.Button();
             this.previous = new System.Windows.Forms.Button();
             this.k_number = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -486,11 +487,21 @@
             this.k_number.Size = new System.Drawing.Size(111, 25);
             this.k_number.TabIndex = 41;
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(1127, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 22);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "K";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1554, 774);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.k_number);
             this.Controls.Add(this.previous);
             this.Controls.Add(this.k_means);
@@ -593,6 +604,7 @@
         private System.Windows.Forms.Button k_means;
         private System.Windows.Forms.Button previous;
         private System.Windows.Forms.TextBox k_number;
+        private System.Windows.Forms.Label label3;
     }
 }
 
