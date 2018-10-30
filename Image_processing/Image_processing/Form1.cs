@@ -17,7 +17,7 @@ namespace Image_processing
         public Form1()
         {
             InitializeComponent();
-            comboBox_laplacian.SelectedIndex = comboBox1_fuzzy.SelectedIndex = 0;
+            comboBox_laplacian.SelectedIndex = comboBox_fuzzy.SelectedIndex = comboBox_morphology.SelectedIndex = 0;
         }
 
         Bitmap img_origin = new Bitmap(1, 1);
@@ -217,6 +217,14 @@ namespace Image_processing
                     case 9:
                         K_means.Function(p, rgb, offset);
                         break;
+                    case 10:
+                        switch (Global.chose_morphology)
+                        {
+                            case "Erosion":
+                                Erosion.Function();
+                                break;
+                        }
+                        break;
                 }
                 p = (byte*)imgp;
             }
@@ -256,7 +264,7 @@ namespace Image_processing
 
         private void fuzzy_Click(object sender, EventArgs e)
         {
-            Global.chose_fuzzy = comboBox1_fuzzy.Text;
+            Global.chose_fuzzy = comboBox_fuzzy.Text;
             point_all(6);
         }
 
@@ -275,6 +283,12 @@ namespace Image_processing
             Global.k = Convert.ToInt32(k_number.Text);
             if (Global.k < 2 || Global.k > 10) { MessageBox.Show("K can't less than 2 or greater than 10!"); }
             else { point_all(9); }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Global.chose_morphology = comboBox_morphology.Text;
+            point_all(10);
         }
     }
 }
