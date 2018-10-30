@@ -10,7 +10,9 @@ namespace Image_processing
     {
         public unsafe static void Function(byte* p, int[,,] rgb, int offset)
         {
-            if(Global.chose_fuzzy == "Medium")
+            p += Global.img.Width * 3 + offset;
+
+            if (Global.chose_fuzzy == "Medium")
             {
                 int[] r = new int[9];
                 int[] g = new int[9];
