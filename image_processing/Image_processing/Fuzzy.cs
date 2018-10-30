@@ -10,7 +10,7 @@ namespace Image_processing
     {
         public unsafe static void Function(byte* p, int[,,] rgb, int offset)
         {
-            void medium()
+            if(Global.chose_fuzzy == "Medium")
             {
                 int[] r = new int[9];
                 int[] g = new int[9];
@@ -52,7 +52,7 @@ namespace Image_processing
                 }
             }
 
-            void average()
+            if (Global.chose_fuzzy == "Average")
             {
                 for (int y = 1; y < Global.img.Height - 1; y++)
                 {
@@ -83,7 +83,7 @@ namespace Image_processing
                 }
             }
 
-            void priority()
+            if (Global.chose_fuzzy == "Priority")
             {
                 int[] m = new int[9] { 1, 3, 1, 3, 9, 3, 1, 3, 1 };
 
@@ -120,19 +120,6 @@ namespace Image_processing
             }
 
             p += Global.img.Width * 3 + offset;
-
-            switch (Global.chose_fuzzy)
-            {
-                case "Medium":
-                    medium();
-                    break;
-                case "Average":
-                    average();
-                    break;
-                case "Priority":
-                    priority();
-                    break;
-            }
         }
     }
 }

@@ -8,29 +8,20 @@ namespace Image_processing
 {
     class Laplacian
     {
+        static int big(int i)
+        {
+            if (i > 255) { i = 255; }
+            else if (i < 0) { i = 0; }
+            return i;
+        }
+
         public unsafe static void Function(byte* p, int[,,] rgb, int offset)
         {
-            int big(int i)
-            {
-                if (i > 255) { i = 255; }
-                else if (i < 0) { i = 0; }
-                return i;
-            }
-
             int[] m = new int[9];
 
-            switch (Global.chose_laplacian)
-            {
-                case "Matrix_1":
-                    m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 };
-                    break;
-                case "Matrix_2":
-                    m = new int[9] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
-                    break;
-                case "Matrix_3":
-                    m = new int[9] { 1, -2, 1, -2, 4, -2, 1, -2, -1 };
-                    break;
-            }
+            if (Global.chose_laplacian == "Matrix_1") { m = new int[9] { -1, -1, -1, -1, 8, -1, -1, -1, -1 }; }
+            if (Global.chose_laplacian == "Matrix_2") { m = new int[9] { 0, -1, 0, -1, 4, -1, 0, -1, 0 }; }
+            if (Global.chose_laplacian == "Matrix_3") { m = new int[9] { 1, -2, 1, -2, 4, -2, 1, -2, -1 }; }
 
             p += Global.img.Width * 3 + offset;
 
