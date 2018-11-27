@@ -131,18 +131,20 @@ namespace Image_processing
 
         private void show_detial_Click(object sender, EventArgs e)
         {
+            int count = 0;
             String s = "";
+            detial.Items.Clear();
 
             for (int x = 0; x < Global.img.Width; x++)
             {
                 for (int y = 0; y < Global.img.Height; y++)
                 {
                     Color color = Global.img.GetPixel(x, y);
-                    s += string.Format("{0:D3}", color.R) + " ";
+                    s = ++count + ".  " + string.Format("{0:D3}", color.R);
+                    detial.Items.Add(s);
                 }
-                s += "\n";
             }
-            detial.Text = s;
+            
         }
 
         private void previous_Click(object sender, EventArgs e)
