@@ -46,3 +46,13 @@ C:\Users\user\Desktop\Code\Image_rocessing\test_image_processing\image_processin
 C:\Users\user\Desktop\Code\Image_rocessing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.exe
 C:\Users\user\Desktop\Code\Image_rocessing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.pdb
 C:\Users\user\Desktop\Code\Image_rocessing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.Form1.resources
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\bin\Debug\Image_processing.exe.config
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\bin\Debug\Image_processing.exe
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\bin\Debug\Image_processing.pdb
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.Form1.resources
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.Properties.Resources.resources
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.exe
+C:\Users\user\Desktop\Code\Image_processing\test_image_processing\image_processing\Image_processing\obj\Debug\Image_processing.pdb

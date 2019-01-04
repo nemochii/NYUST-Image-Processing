@@ -65,6 +65,7 @@
     <Compile Include="Invert.cs" />
     <Compile Include="K_means.cs" />
     <Compile Include="Laplacian.cs" />
+    <Compile Include="Morphology\Dilation.cs" />
     <Compile Include="Morphology\Erosion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

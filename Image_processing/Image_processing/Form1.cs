@@ -220,11 +220,13 @@ namespace Image_processing
                         K_means.Function(p, rgb, offset);
                         break;
                     case 10:
-                        switch (Global.chose_morphology)
+                        if (Global.chose_morphology == "Erosion")
                         {
-                            case "Erosion":
-                                Erosion.Function();
-                                break;
+                            Erosion.Function(p, rgb, offset);
+                        }
+                        if (Global.chose_morphology == "Dilation")
+                        {
+                            Dilation.Function(p, rgb, offset);
                         }
                         break;
                 }
