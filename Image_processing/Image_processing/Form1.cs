@@ -224,9 +224,19 @@ namespace Image_processing
                         {
                             Erosion.Function(p, rgb, offset);
                         }
-                        if (Global.chose_morphology == "Dilation")
+                        else if (Global.chose_morphology == "Dilation")
                         {
                             Dilation.Function(p, rgb, offset);
+                        }
+                        else if (Global.chose_morphology == "Opening")
+                        {
+                            Erosion.Function(p, rgb, offset);
+                            Dilation.Function(p, rgb, offset);
+                        }
+                        else
+                        {
+                            Dilation.Function(p, rgb, offset);
+                            Erosion.Function(p, rgb, offset);
                         }
                         break;
                 }

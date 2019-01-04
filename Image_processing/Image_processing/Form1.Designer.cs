@@ -297,7 +297,7 @@
             // show_detial
             // 
             this.show_detial.Location = new System.Drawing.Point(1059, 348);
-            this.show_detial.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.show_detial.Margin = new System.Windows.Forms.Padding(5);
             this.show_detial.Name = "show_detial";
             this.show_detial.Size = new System.Drawing.Size(100, 29);
             this.show_detial.TabIndex = 21;
@@ -351,7 +351,7 @@
             "Matrix_2",
             "Matrix_3"});
             this.comboBox_laplacian.Location = new System.Drawing.Point(1235, 154);
-            this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_laplacian.Name = "comboBox_laplacian";
             this.comboBox_laplacian.Size = new System.Drawing.Size(111, 23);
             this.comboBox_laplacian.TabIndex = 28;
@@ -380,7 +380,7 @@
             "Average",
             "Priority"});
             this.comboBox_fuzzy.Location = new System.Drawing.Point(1235, 201);
-            this.comboBox_fuzzy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_fuzzy.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_fuzzy.Name = "comboBox_fuzzy";
             this.comboBox_fuzzy.Size = new System.Drawing.Size(111, 23);
             this.comboBox_fuzzy.TabIndex = 30;
@@ -529,9 +529,11 @@
             this.comboBox_morphology.FormattingEnabled = true;
             this.comboBox_morphology.Items.AddRange(new object[] {
             "Erosion",
-            "Dilation"});
+            "Dilation",
+            "Opening",
+            "Closing"});
             this.comboBox_morphology.Location = new System.Drawing.Point(1235, 296);
-            this.comboBox_morphology.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_morphology.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_morphology.Name = "comboBox_morphology";
             this.comboBox_morphology.Size = new System.Drawing.Size(111, 23);
             this.comboBox_morphology.TabIndex = 44;
@@ -540,7 +542,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pictureBox7.Location = new System.Drawing.Point(40, 15);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(264, 106);
             this.pictureBox7.TabIndex = 45;
@@ -550,7 +552,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.pictureBox8.Location = new System.Drawing.Point(559, 15);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(359, 105);
             this.pictureBox8.TabIndex = 46;
@@ -560,7 +562,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pictureBox9.Location = new System.Drawing.Point(1199, 15);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(292, 104);
             this.pictureBox9.TabIndex = 47;
@@ -570,7 +572,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox10.Location = new System.Drawing.Point(1199, 138);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(291, 210);
             this.pictureBox10.TabIndex = 48;
@@ -581,7 +583,7 @@
             this.detial.FormattingEnabled = true;
             this.detial.ItemHeight = 15;
             this.detial.Location = new System.Drawing.Point(1059, 388);
-            this.detial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.detial.Margin = new System.Windows.Forms.Padding(4);
             this.detial.Name = "detial";
             this.detial.Size = new System.Drawing.Size(460, 349);
             this.detial.TabIndex = 49;
