@@ -62,9 +62,13 @@
     <Compile Include="Global.cs" />
     <Compile Include="Grayscale.cs" />
     <Compile Include="Histogram_equalization.cs" />
+    <Compile Include="Img_zoom.cs" />
     <Compile Include="Invert.cs" />
     <Compile Include="K_means.cs" />
     <Compile Include="Laplacian.cs" />
+    <Compile Include="Look.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Morphology\Dilation.cs" />
     <Compile Include="Morphology\Erosion.cs" />
     <Compile Include="Program.cs" />

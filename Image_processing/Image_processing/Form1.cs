@@ -17,7 +17,7 @@ namespace Image_processing
         public Form1()
         {
             InitializeComponent();
-            comboBox_laplacian.SelectedIndex = comboBox_fuzzy.SelectedIndex = comboBox_morphology.SelectedIndex = 0;
+            comboBox_laplacian.SelectedIndex = comboBox_fuzzy.SelectedIndex = comboBox_morphology.SelectedIndex = comboBox_zoom.SelectedIndex = 0;
         }
 
         Bitmap img_origin = new Bitmap(1, 1);
@@ -115,8 +115,8 @@ namespace Image_processing
         {
             try
             {
-                int rewidth = Int32.Parse(width.Text);
-                int reheight = Int32.Parse(height.Text);
+                int rewidth = int.Parse(width.Text);
+                int reheight = int.Parse(height.Text);
 
                 Global.img = new Bitmap(Global.img, new Size(rewidth, reheight));
                 start_histogtam(2, Global.img);
@@ -168,6 +168,8 @@ namespace Image_processing
 
             int offset = bpdata.Stride - Global.img.Width * 3;
 
+            Global.p_bpdata = bpdata;
+            bool jg = true;
             unsafe
             {
                 byte* p = (byte*)imgp;
@@ -239,10 +241,36 @@ namespace Image_processing
                             Erosion.Function(p, rgb, offset);
                         }
                         break;
+                    case 11:
+                        jg = false;
+                        if (Global.chose_zoom == "0.5x Zoom")
+                        {
+                            Img_zoom.Function(p, bpdata.Stride, Global.img.Width / 2, Global.img.Height / 2);
+                        }
+                        else if (Global.chose_zoom == "0.2x Zoom")
+                        {
+                            Img_zoom.Function(p, bpdata.Stride, Global.img.Width / 5, Global.img.Height / 5);
+                        }
+                        else if (Global.chose_zoom == "2x Zoom")
+                        {
+                            Img_zoom.Function(p, bpdata.Stride, Global.img.Width * 2, Global.img.Height * 2);
+                        }
+                        else
+                        {
+                            Img_zoom.Function(p, bpdata.Stride, Global.img.Width * 5, Global.img.Height * 5);
+                        }
+                        break;
+                    case 12:
+                        jg = false;
+                        int rewidth = int.Parse(img_width.Text);
+                        int reheight = int.Parse(img_height.Text);
+
+                        Img_zoom.Function(p, bpdata.Stride, rewidth, reheight);
+                        break;
                 }
                 p = (byte*)imgp;
             }
-            Global.img.UnlockBits(bpdata);
+            if (jg) { Global.img.UnlockBits(bpdata); }
 
             start_histogtam(2, Global.img);
 
@@ -303,6 +331,17 @@ namespace Image_processing
         {
             Global.chose_morphology = comboBox_morphology.Text;
             point_all(10);
+        }
+
+        private void Imgresize_Click(object sender, EventArgs e)
+        {
+            Global.chose_zoom = comboBox_zoom.Text;
+            point_all(11);
+        }
+
+        private void Specified_size_Click(object sender, EventArgs e)
+        {
+            point_all(12);
         }
     }
 }

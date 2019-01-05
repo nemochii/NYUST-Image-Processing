@@ -38,8 +38,6 @@
             this.width = new System.Windows.Forms.TextBox();
             this.height = new System.Windows.Forms.TextBox();
             this.resize = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.origin_R = new System.Windows.Forms.PictureBox();
             this.origin_G = new System.Windows.Forms.PictureBox();
             this.origin_B = new System.Windows.Forms.PictureBox();
@@ -66,7 +64,6 @@
             this.k_means = new System.Windows.Forms.Button();
             this.previous = new System.Windows.Forms.Button();
             this.k_number = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox_morphology = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -74,6 +71,12 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.detial = new System.Windows.Forms.ListBox();
+            this.Specified_size = new System.Windows.Forms.Button();
+            this.comboBox_zoom = new System.Windows.Forms.ComboBox();
+            this.Imgresize = new System.Windows.Forms.Button();
+            this.img_width = new System.Windows.Forms.TextBox();
+            this.img_height = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -92,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // Open
@@ -167,23 +171,31 @@
             // 
             // width
             // 
-            this.width.Location = new System.Drawing.Point(1281, 32);
+            this.width.ForeColor = System.Drawing.Color.Silver;
+            this.width.Location = new System.Drawing.Point(1061, 33);
             this.width.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(111, 25);
             this.width.TabIndex = 7;
+            this.width.Text = "Width";
+            this.width.Enter += new System.EventHandler(this.width_Enter);
+            this.width.Leave += new System.EventHandler(this.width_Leave);
             // 
             // height
             // 
-            this.height.Location = new System.Drawing.Point(1281, 64);
+            this.height.ForeColor = System.Drawing.Color.Silver;
+            this.height.Location = new System.Drawing.Point(1061, 65);
             this.height.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.height.Name = "height";
             this.height.Size = new System.Drawing.Size(111, 25);
             this.height.TabIndex = 8;
+            this.height.Text = "Height";
+            this.height.Enter += new System.EventHandler(this.height_Enter);
+            this.height.Leave += new System.EventHandler(this.height_Leave);
             // 
             // resize
             // 
-            this.resize.Location = new System.Drawing.Point(1408, 32);
+            this.resize.Location = new System.Drawing.Point(1188, 33);
             this.resize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resize.Name = "resize";
             this.resize.Size = new System.Drawing.Size(59, 56);
@@ -191,26 +203,6 @@
             this.resize.Text = "Resize";
             this.resize.UseVisualStyleBackColor = true;
             this.resize.Click += new System.EventHandler(this.resize_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(1220, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Width";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(1220, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Height";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // origin_R
             // 
@@ -329,7 +321,7 @@
             // 
             // laplacian
             // 
-            this.laplacian.Location = new System.Drawing.Point(1368, 152);
+            this.laplacian.Location = new System.Drawing.Point(1397, 167);
             this.laplacian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.laplacian.Name = "laplacian";
             this.laplacian.Size = new System.Drawing.Size(99, 25);
@@ -350,7 +342,7 @@
             "Matrix_1",
             "Matrix_2",
             "Matrix_3"});
-            this.comboBox_laplacian.Location = new System.Drawing.Point(1235, 154);
+            this.comboBox_laplacian.Location = new System.Drawing.Point(1264, 169);
             this.comboBox_laplacian.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_laplacian.Name = "comboBox_laplacian";
             this.comboBox_laplacian.Size = new System.Drawing.Size(111, 23);
@@ -358,7 +350,7 @@
             // 
             // fuzzy
             // 
-            this.fuzzy.Location = new System.Drawing.Point(1368, 199);
+            this.fuzzy.Location = new System.Drawing.Point(1397, 214);
             this.fuzzy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fuzzy.Name = "fuzzy";
             this.fuzzy.Size = new System.Drawing.Size(99, 25);
@@ -379,7 +371,7 @@
             "Medium",
             "Average",
             "Priority"});
-            this.comboBox_fuzzy.Location = new System.Drawing.Point(1235, 201);
+            this.comboBox_fuzzy.Location = new System.Drawing.Point(1264, 216);
             this.comboBox_fuzzy.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_fuzzy.Name = "comboBox_fuzzy";
             this.comboBox_fuzzy.Size = new System.Drawing.Size(111, 23);
@@ -469,7 +461,7 @@
             // 
             // k_means
             // 
-            this.k_means.Location = new System.Drawing.Point(1368, 246);
+            this.k_means.Location = new System.Drawing.Point(1397, 261);
             this.k_means.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.k_means.Name = "k_means";
             this.k_means.Size = new System.Drawing.Size(99, 28);
@@ -491,25 +483,19 @@
             // 
             // k_number
             // 
-            this.k_number.Location = new System.Drawing.Point(1235, 249);
+            this.k_number.ForeColor = System.Drawing.Color.Silver;
+            this.k_number.Location = new System.Drawing.Point(1264, 264);
             this.k_number.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.k_number.Name = "k_number";
             this.k_number.Size = new System.Drawing.Size(111, 25);
             this.k_number.TabIndex = 41;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(1200, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 22);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "K";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.k_number.Text = "K";
+            this.k_number.Enter += new System.EventHandler(this.k_number_Enter);
+            this.k_number.Leave += new System.EventHandler(this.k_number_Leave);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1368, 294);
+            this.button1.Location = new System.Drawing.Point(1397, 309);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 28);
@@ -532,7 +518,7 @@
             "Dilation",
             "Opening",
             "Closing"});
-            this.comboBox_morphology.Location = new System.Drawing.Point(1235, 296);
+            this.comboBox_morphology.Location = new System.Drawing.Point(1264, 311);
             this.comboBox_morphology.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_morphology.Name = "comboBox_morphology";
             this.comboBox_morphology.Size = new System.Drawing.Size(111, 23);
@@ -561,20 +547,20 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pictureBox9.Location = new System.Drawing.Point(1199, 15);
+            this.pictureBox9.Location = new System.Drawing.Point(1037, 16);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(292, 104);
+            this.pictureBox9.Size = new System.Drawing.Size(232, 104);
             this.pictureBox9.TabIndex = 47;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox10.Location = new System.Drawing.Point(1199, 138);
+            this.pictureBox10.Location = new System.Drawing.Point(1239, 153);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(291, 210);
+            this.pictureBox10.Size = new System.Drawing.Size(280, 210);
             this.pictureBox10.TabIndex = 48;
             this.pictureBox10.TabStop = false;
             // 
@@ -588,15 +574,95 @@
             this.detial.Size = new System.Drawing.Size(460, 349);
             this.detial.TabIndex = 49;
             // 
+            // Specified_size
+            // 
+            this.Specified_size.Location = new System.Drawing.Point(1427, 34);
+            this.Specified_size.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Specified_size.Name = "Specified_size";
+            this.Specified_size.Size = new System.Drawing.Size(75, 56);
+            this.Specified_size.TabIndex = 50;
+            this.Specified_size.Text = "Specified Size";
+            this.Specified_size.UseVisualStyleBackColor = true;
+            this.Specified_size.Click += new System.EventHandler(this.Specified_size_Click);
+            // 
+            // comboBox_zoom
+            // 
+            this.comboBox_zoom.AutoCompleteCustomSource.AddRange(new string[] {
+            "0.5x Zoom",
+            "0.2x Zoom",
+            "2x Zoom",
+            "5x Zoom"});
+            this.comboBox_zoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_zoom.FormattingEnabled = true;
+            this.comboBox_zoom.Items.AddRange(new object[] {
+            "0.5x Zoom",
+            "0.2x Zoom",
+            "2x Zoom",
+            "5x Zoom"});
+            this.comboBox_zoom.Location = new System.Drawing.Point(1299, 110);
+            this.comboBox_zoom.Name = "comboBox_zoom";
+            this.comboBox_zoom.Size = new System.Drawing.Size(111, 23);
+            this.comboBox_zoom.TabIndex = 51;
+            // 
+            // Imgresize
+            // 
+            this.Imgresize.Location = new System.Drawing.Point(1424, 110);
+            this.Imgresize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Imgresize.Name = "Imgresize";
+            this.Imgresize.Size = new System.Drawing.Size(78, 25);
+            this.Imgresize.TabIndex = 52;
+            this.Imgresize.Text = "Img Resize";
+            this.Imgresize.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Imgresize.UseVisualStyleBackColor = true;
+            this.Imgresize.Click += new System.EventHandler(this.Imgresize_Click);
+            // 
+            // img_width
+            // 
+            this.img_width.ForeColor = System.Drawing.Color.Silver;
+            this.img_width.Location = new System.Drawing.Point(1299, 31);
+            this.img_width.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.img_width.Name = "img_width";
+            this.img_width.Size = new System.Drawing.Size(111, 25);
+            this.img_width.TabIndex = 55;
+            this.img_width.Text = "Width";
+            this.img_width.Enter += new System.EventHandler(this.img_width_Enter);
+            this.img_width.Leave += new System.EventHandler(this.img_width_Leave);
+            // 
+            // img_height
+            // 
+            this.img_height.ForeColor = System.Drawing.Color.Silver;
+            this.img_height.Location = new System.Drawing.Point(1299, 67);
+            this.img_height.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.img_height.Name = "img_height";
+            this.img_height.Size = new System.Drawing.Size(111, 25);
+            this.img_height.TabIndex = 56;
+            this.img_height.Text = "Height";
+            this.img_height.Enter += new System.EventHandler(this.img_height_Enter);
+            this.img_height.Leave += new System.EventHandler(this.img_height_Leave);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pictureBox11.Location = new System.Drawing.Point(1277, 16);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(243, 129);
+            this.pictureBox11.TabIndex = 57;
+            this.pictureBox11.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1883, 774);
+            this.ClientSize = new System.Drawing.Size(1541, 774);
+            this.Controls.Add(this.img_height);
+            this.Controls.Add(this.img_width);
+            this.Controls.Add(this.Imgresize);
+            this.Controls.Add(this.comboBox_zoom);
+            this.Controls.Add(this.Specified_size);
             this.Controls.Add(this.detial);
             this.Controls.Add(this.comboBox_morphology);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.k_number);
             this.Controls.Add(this.previous);
             this.Controls.Add(this.k_means);
@@ -623,8 +689,6 @@
             this.Controls.Add(this.origin_B);
             this.Controls.Add(this.origin_G);
             this.Controls.Add(this.origin_R);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.resize);
             this.Controls.Add(this.height);
             this.Controls.Add(this.width);
@@ -639,6 +703,7 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox11);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "UI";
@@ -660,6 +725,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,8 +743,6 @@
         private System.Windows.Forms.TextBox width;
         private System.Windows.Forms.TextBox height;
         private System.Windows.Forms.Button resize;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox origin_R;
         private System.Windows.Forms.PictureBox origin_G;
         private System.Windows.Forms.PictureBox origin_B;
@@ -705,7 +769,6 @@
         private System.Windows.Forms.Button k_means;
         private System.Windows.Forms.Button previous;
         private System.Windows.Forms.TextBox k_number;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox_morphology;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -713,6 +776,12 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ListBox detial;
+        private System.Windows.Forms.Button Specified_size;
+        private System.Windows.Forms.ComboBox comboBox_zoom;
+        private System.Windows.Forms.Button Imgresize;
+        private System.Windows.Forms.TextBox img_width;
+        private System.Windows.Forms.TextBox img_height;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
 
