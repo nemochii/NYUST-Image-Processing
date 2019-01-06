@@ -64,7 +64,7 @@
             this.k_means = new System.Windows.Forms.Button();
             this.previous = new System.Windows.Forms.Button();
             this.k_number = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.morphology = new System.Windows.Forms.Button();
             this.comboBox_morphology = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -493,16 +493,16 @@
             this.k_number.Enter += new System.EventHandler(this.k_number_Enter);
             this.k_number.Leave += new System.EventHandler(this.k_number_Leave);
             // 
-            // button1
+            // morphology
             // 
-            this.button1.Location = new System.Drawing.Point(1397, 309);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 28);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Morphology";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.morphology.Location = new System.Drawing.Point(1397, 309);
+            this.morphology.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.morphology.Name = "morphology";
+            this.morphology.Size = new System.Drawing.Size(99, 28);
+            this.morphology.TabIndex = 43;
+            this.morphology.Text = "Morphology";
+            this.morphology.UseVisualStyleBackColor = true;
+            this.morphology.Click += new System.EventHandler(this.morphology_Click);
             // 
             // comboBox_morphology
             // 
@@ -662,7 +662,7 @@
             this.Controls.Add(this.Specified_size);
             this.Controls.Add(this.detial);
             this.Controls.Add(this.comboBox_morphology);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.morphology);
             this.Controls.Add(this.k_number);
             this.Controls.Add(this.previous);
             this.Controls.Add(this.k_means);
@@ -769,7 +769,7 @@
         private System.Windows.Forms.Button k_means;
         private System.Windows.Forms.Button previous;
         private System.Windows.Forms.TextBox k_number;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button morphology;
         private System.Windows.Forms.ComboBox comboBox_morphology;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
