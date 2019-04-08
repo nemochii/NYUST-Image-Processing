@@ -17,7 +17,7 @@ namespace Image_processing
         public Form1()
         {
             InitializeComponent();
-            comboBox_laplacian.SelectedIndex = comboBox_fuzzy.SelectedIndex = comboBox_morphology.SelectedIndex = comboBox_zoom.SelectedIndex = 0;
+            comboBox_laplacian.SelectedIndex = comboBox_fuzzy.SelectedIndex = comboBox_morphology.SelectedIndex = comboBox_zoom.SelectedIndex = comboBox_grayscale.SelectedIndex = 0;
         }
 
         Bitmap img_origin = new Bitmap(1, 1);
@@ -38,6 +38,9 @@ namespace Image_processing
                 img_origin = new Bitmap(Image.FromFile(open.FileName));
                 img_origin = img_origin.Clone(new Rectangle(0, 0, img_origin.Width, img_origin.Height), PixelFormat.Format24bppRgb);
                 Global.img = new Bitmap(img_origin);
+                Global.R_img = new Bitmap(img_origin);
+                Global.G_img = new Bitmap(img_origin);
+                Global.B_img = new Bitmap(img_origin);
 
                 origin_width = img_origin.Width;
                 origin_height = img_origin.Height;

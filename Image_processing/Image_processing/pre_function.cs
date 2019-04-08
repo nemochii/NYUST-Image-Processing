@@ -44,6 +44,16 @@ namespace Image_processing
             up.Push(Global.img.Clone());
             BitmapData bpdata = Global.img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             IntPtr imgp = bpdata.Scan0;
+
+            BitmapData R_bpdata = Global.R_img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+            IntPtr R_imgp = R_bpdata.Scan0;
+
+            BitmapData G_bpdata = Global.G_img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+            IntPtr G_imgp = G_bpdata.Scan0;
+
+            BitmapData B_bpdata = Global.B_img.LockBits(new Rectangle(0, 0, Global.img.Width, Global.img.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+            IntPtr B_imgp = B_bpdata.Scan0;
+
             int[,,] rgb = new int[Global.img.Width, Global.img.Height, 4];
             int[,] countrgb = new int[3, 256];
 
@@ -54,6 +64,9 @@ namespace Image_processing
             unsafe
             {
                 byte* p = (byte*)imgp;
+                byte* R_p = (byte*)R_imgp;
+                byte* G_p = (byte*)G_imgp;
+                byte* B_p = (byte*)B_imgp;
 
                 for (int y = 0; y < Global.img.Height; y++)
                 {
@@ -72,11 +85,14 @@ namespace Image_processing
                     p += offset;
                 }
                 p = (byte*)imgp;
+                R_p = (byte*)R_imgp;
+                G_p = (byte*)G_imgp;
+                B_p = (byte*)B_imgp;
 
                 switch (function)
                 {
                     case 1:
-                        Grayscale.Function(p, rgb, offset);
+                        Grayscale.Function(p, rgb, offset, R_p, G_p, B_p, comboBox_grayscale.Text);
                         break;
                     case 2:
                         Invert.Function(p, rgb, offset);
@@ -151,12 +167,21 @@ namespace Image_processing
                 }
                 p = (byte*)imgp;
             }
-            if (jg) { Global.img.UnlockBits(bpdata); }
+            if (jg)
+            {
+                Global.img.UnlockBits(bpdata);
+                Global.R_img.UnlockBits(R_bpdata);
+                Global.G_img.UnlockBits(G_bpdata);
+                Global.B_img.UnlockBits(B_bpdata);
+            }
 
             start_histogtam(2, Global.img);
 
             processing_pixel.Text = Global.img.Width + "x" + Global.img.Height;
             processed_picture.Image = Global.img;
+            R_gray.Image = Global.R_img;
+            G_gray.Image = Global.G_img;
+            B_gray.Image = Global.B_img;
         }
     }
 }

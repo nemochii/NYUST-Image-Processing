@@ -77,6 +77,13 @@
             this.img_width = new System.Windows.Forms.TextBox();
             this.img_height = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.R_gray = new System.Windows.Forms.PictureBox();
+            this.G_gray = new System.Windows.Forms.PictureBox();
+            this.B_gray = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_grayscale = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -96,6 +103,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_gray)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G_gray)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B_gray)).BeginInit();
             this.SuspendLayout();
             // 
             // Open
@@ -650,11 +660,96 @@
             this.pictureBox11.TabIndex = 57;
             this.pictureBox11.TabStop = false;
             // 
+            // R_gray
+            // 
+            this.R_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.R_gray.Location = new System.Drawing.Point(552, 775);
+            this.R_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.R_gray.Name = "R_gray";
+            this.R_gray.Size = new System.Drawing.Size(139, 111);
+            this.R_gray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.R_gray.TabIndex = 58;
+            this.R_gray.TabStop = false;
+            // 
+            // G_gray
+            // 
+            this.G_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.G_gray.Location = new System.Drawing.Point(715, 775);
+            this.G_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.G_gray.Name = "G_gray";
+            this.G_gray.Size = new System.Drawing.Size(139, 111);
+            this.G_gray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.G_gray.TabIndex = 59;
+            this.G_gray.TabStop = false;
+            // 
+            // B_gray
+            // 
+            this.B_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.B_gray.Location = new System.Drawing.Point(876, 775);
+            this.B_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.B_gray.Name = "B_gray";
+            this.B_gray.Size = new System.Drawing.Size(139, 111);
+            this.B_gray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.B_gray.TabIndex = 60;
+            this.B_gray.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(597, 888);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 15);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "R_gray";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(756, 888);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 15);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "G_gray";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(924, 888);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 15);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "B_gray";
+            // 
+            // comboBox_grayscale
+            // 
+            this.comboBox_grayscale.AutoCompleteCustomSource.AddRange(new string[] {
+            "Weight",
+            "Average",
+            "Maximum"});
+            this.comboBox_grayscale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_grayscale.FormattingEnabled = true;
+            this.comboBox_grayscale.Items.AddRange(new object[] {
+            "Weight",
+            "Average",
+            "Maximum"});
+            this.comboBox_grayscale.Location = new System.Drawing.Point(440, 24);
+            this.comboBox_grayscale.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_grayscale.Name = "comboBox_grayscale";
+            this.comboBox_grayscale.Size = new System.Drawing.Size(111, 23);
+            this.comboBox_grayscale.TabIndex = 64;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1541, 774);
+            this.ClientSize = new System.Drawing.Size(1541, 915);
+            this.Controls.Add(this.comboBox_grayscale);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.B_gray);
+            this.Controls.Add(this.G_gray);
+            this.Controls.Add(this.R_gray);
             this.Controls.Add(this.img_height);
             this.Controls.Add(this.img_width);
             this.Controls.Add(this.Imgresize);
@@ -726,6 +821,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_gray)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G_gray)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B_gray)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -782,6 +880,13 @@
         private System.Windows.Forms.TextBox img_width;
         private System.Windows.Forms.TextBox img_height;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox R_gray;
+        private System.Windows.Forms.PictureBox G_gray;
+        private System.Windows.Forms.PictureBox B_gray;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox_grayscale;
     }
 }
 
