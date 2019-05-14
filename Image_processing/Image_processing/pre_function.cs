@@ -164,6 +164,12 @@ namespace Image_processing
 
                         Img_zoom.Function(p, bpdata.Stride, rewidth, reheight);
                         break;
+                    case 13:
+                        Log.Function(p, rgb, offset);
+                        break;
+                    case 14:
+                        Power_law.Function(p, rgb, offset);
+                        break;
                 }
                 p = (byte*)imgp;
             }

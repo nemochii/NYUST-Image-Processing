@@ -59,6 +59,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Function\Fuzzy.cs" />
+    <Compile Include="Function\Log.cs" />
+    <Compile Include="Function\Power_law.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Function\Grayscale.cs" />
     <Compile Include="Function\Histogram_equalization.cs" />

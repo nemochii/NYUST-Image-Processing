@@ -98,5 +98,41 @@ namespace Image_processing
                 k_number.ForeColor = Color.Silver;
             }
         }
+
+        private void pow_number_Enter(object sender, EventArgs e)
+        {
+            if (pow_number.Text == "Pow")
+            {
+                pow_number.Text = "";
+                pow_number.ForeColor = Color.Black;
+            }
+        }
+
+        private void pow_number_Leave(object sender, EventArgs e)
+        {
+            if (pow_number.Text == "")
+            {
+                pow_number.Text = "Pow";
+                pow_number.ForeColor = Color.Silver;
+            }
+        }
+
+        private void c_number_Enter(object sender, EventArgs e)
+        {
+            if (c_number.Text == "C")
+            {
+                c_number.Text = "";
+                c_number.ForeColor = Color.Black;
+            }
+        }
+
+        private void c_number_Leave(object sender, EventArgs e)
+        {
+            if (c_number.Text == "")
+            {
+                c_number.Text = "C";
+                c_number.ForeColor = Color.Silver;
+            }
+        }
     }
 }

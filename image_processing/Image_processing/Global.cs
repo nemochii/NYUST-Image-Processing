@@ -12,6 +12,8 @@ namespace Image_processing
         public static string chose_laplacian, chose_fuzzy;
         public static int k;
         public static BitmapData p_bpdata;
+        public static float pow;
+        public static int c;
 
         public static void Zoom_exception() { img.UnlockBits(p_bpdata); }
     }

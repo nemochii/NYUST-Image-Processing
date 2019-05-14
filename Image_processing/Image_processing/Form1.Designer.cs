@@ -84,6 +84,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox_grayscale = new System.Windows.Forms.ComboBox();
+            this.log = new System.Windows.Forms.Button();
+            this.power_law = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pow_number = new System.Windows.Forms.TextBox();
+            this.c_number = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.origin_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.processed_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.origin_R)).BeginInit();
@@ -132,7 +137,7 @@
             // 
             // origin_picture
             // 
-            this.origin_picture.Location = new System.Drawing.Point(40, 138);
+            this.origin_picture.Location = new System.Drawing.Point(40, 147);
             this.origin_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.origin_picture.Name = "origin_picture";
             this.origin_picture.Size = new System.Drawing.Size(463, 468);
@@ -142,7 +147,7 @@
             // 
             // processed_picture
             // 
-            this.processed_picture.Location = new System.Drawing.Point(552, 138);
+            this.processed_picture.Location = new System.Drawing.Point(533, 147);
             this.processed_picture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_picture.Name = "processed_picture";
             this.processed_picture.Size = new System.Drawing.Size(463, 468);
@@ -152,18 +157,18 @@
             // 
             // origin_pixel
             // 
-            this.origin_pixel.Location = new System.Drawing.Point(403, 112);
+            this.origin_pixel.Location = new System.Drawing.Point(403, 124);
             this.origin_pixel.Name = "origin_pixel";
-            this.origin_pixel.Size = new System.Drawing.Size(100, 22);
+            this.origin_pixel.Size = new System.Drawing.Size(100, 21);
             this.origin_pixel.TabIndex = 4;
             this.origin_pixel.Text = "0x0";
             this.origin_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // processing_pixel
             // 
-            this.processing_pixel.Location = new System.Drawing.Point(915, 112);
+            this.processing_pixel.Location = new System.Drawing.Point(897, 124);
             this.processing_pixel.Name = "processing_pixel";
-            this.processing_pixel.Size = new System.Drawing.Size(100, 22);
+            this.processing_pixel.Size = new System.Drawing.Size(100, 21);
             this.processing_pixel.TabIndex = 5;
             this.processing_pixel.Text = "0x0";
             this.processing_pixel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -247,7 +252,7 @@
             // processed_B
             // 
             this.processed_B.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.processed_B.Location = new System.Drawing.Point(877, 626);
+            this.processed_B.Location = new System.Drawing.Point(858, 626);
             this.processed_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_B.Name = "processed_B";
             this.processed_B.Size = new System.Drawing.Size(139, 111);
@@ -257,7 +262,7 @@
             // processed_G
             // 
             this.processed_G.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.processed_G.Location = new System.Drawing.Point(715, 626);
+            this.processed_G.Location = new System.Drawing.Point(696, 626);
             this.processed_G.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_G.Name = "processed_G";
             this.processed_G.Size = new System.Drawing.Size(139, 111);
@@ -267,7 +272,7 @@
             // processed_R
             // 
             this.processed_R.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.processed_R.Location = new System.Drawing.Point(552, 626);
+            this.processed_R.Location = new System.Drawing.Point(533, 626);
             this.processed_R.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.processed_R.Name = "processed_R";
             this.processed_R.Size = new System.Drawing.Size(139, 111);
@@ -276,7 +281,7 @@
             // 
             // grayscale
             // 
-            this.grayscale.Location = new System.Drawing.Point(584, 24);
+            this.grayscale.Location = new System.Drawing.Point(566, 24);
             this.grayscale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grayscale.Name = "grayscale";
             this.grayscale.Size = new System.Drawing.Size(99, 40);
@@ -287,7 +292,7 @@
             // 
             // invert
             // 
-            this.invert.Location = new System.Drawing.Point(584, 69);
+            this.invert.Location = new System.Drawing.Point(566, 69);
             this.invert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.invert.Name = "invert";
             this.invert.Size = new System.Drawing.Size(99, 40);
@@ -309,7 +314,7 @@
             // 
             // retro
             // 
-            this.retro.Location = new System.Drawing.Point(688, 24);
+            this.retro.Location = new System.Drawing.Point(670, 24);
             this.retro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.retro.Name = "retro";
             this.retro.Size = new System.Drawing.Size(99, 40);
@@ -320,7 +325,7 @@
             // 
             // sobel
             // 
-            this.sobel.Location = new System.Drawing.Point(688, 69);
+            this.sobel.Location = new System.Drawing.Point(670, 69);
             this.sobel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sobel.Name = "sobel";
             this.sobel.Size = new System.Drawing.Size(99, 40);
@@ -389,7 +394,7 @@
             // 
             // sharpen
             // 
-            this.sharpen.Location = new System.Drawing.Point(792, 22);
+            this.sharpen.Location = new System.Drawing.Point(774, 22);
             this.sharpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sharpen.Name = "sharpen";
             this.sharpen.Size = new System.Drawing.Size(99, 40);
@@ -400,7 +405,7 @@
             // 
             // H_E
             // 
-            this.H_E.Location = new System.Drawing.Point(792, 68);
+            this.H_E.Location = new System.Drawing.Point(774, 68);
             this.H_E.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.H_E.Name = "H_E";
             this.H_E.Size = new System.Drawing.Size(99, 40);
@@ -422,7 +427,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Red;
-            this.pictureBox2.Location = new System.Drawing.Point(552, 742);
+            this.pictureBox2.Location = new System.Drawing.Point(533, 742);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(139, 15);
@@ -442,7 +447,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Green;
-            this.pictureBox4.Location = new System.Drawing.Point(715, 742);
+            this.pictureBox4.Location = new System.Drawing.Point(696, 742);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(139, 15);
@@ -462,7 +467,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox6.Location = new System.Drawing.Point(877, 742);
+            this.pictureBox6.Location = new System.Drawing.Point(858, 742);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(139, 15);
@@ -547,10 +552,10 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pictureBox8.Location = new System.Drawing.Point(559, 15);
+            this.pictureBox8.Location = new System.Drawing.Point(541, 15);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(359, 105);
+            this.pictureBox8.Size = new System.Drawing.Size(456, 105);
             this.pictureBox8.TabIndex = 46;
             this.pictureBox8.TabStop = false;
             // 
@@ -663,7 +668,7 @@
             // R_gray
             // 
             this.R_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.R_gray.Location = new System.Drawing.Point(552, 775);
+            this.R_gray.Location = new System.Drawing.Point(533, 775);
             this.R_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.R_gray.Name = "R_gray";
             this.R_gray.Size = new System.Drawing.Size(139, 111);
@@ -674,7 +679,7 @@
             // G_gray
             // 
             this.G_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.G_gray.Location = new System.Drawing.Point(715, 775);
+            this.G_gray.Location = new System.Drawing.Point(696, 775);
             this.G_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.G_gray.Name = "G_gray";
             this.G_gray.Size = new System.Drawing.Size(139, 111);
@@ -685,7 +690,7 @@
             // B_gray
             // 
             this.B_gray.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.B_gray.Location = new System.Drawing.Point(876, 775);
+            this.B_gray.Location = new System.Drawing.Point(857, 775);
             this.B_gray.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.B_gray.Name = "B_gray";
             this.B_gray.Size = new System.Drawing.Size(139, 111);
@@ -696,7 +701,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(597, 888);
+            this.label1.Location = new System.Drawing.Point(578, 888);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 61;
@@ -705,7 +710,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(756, 888);
+            this.label2.Location = new System.Drawing.Point(737, 888);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 62;
@@ -714,7 +719,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(924, 888);
+            this.label3.Location = new System.Drawing.Point(905, 888);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 63;
@@ -732,17 +737,76 @@
             "Weight",
             "Average",
             "Maximum"});
-            this.comboBox_grayscale.Location = new System.Drawing.Point(440, 24);
+            this.comboBox_grayscale.Location = new System.Drawing.Point(422, 24);
             this.comboBox_grayscale.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_grayscale.Name = "comboBox_grayscale";
             this.comboBox_grayscale.Size = new System.Drawing.Size(111, 23);
             this.comboBox_grayscale.TabIndex = 64;
+            // 
+            // log
+            // 
+            this.log.Location = new System.Drawing.Point(879, 22);
+            this.log.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(99, 40);
+            this.log.TabIndex = 65;
+            this.log.Text = "Log";
+            this.log.UseVisualStyleBackColor = true;
+            this.log.Click += new System.EventHandler(this.log_Click);
+            // 
+            // power_law
+            // 
+            this.power_law.Location = new System.Drawing.Point(1173, 167);
+            this.power_law.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.power_law.Name = "power_law";
+            this.power_law.Size = new System.Drawing.Size(59, 56);
+            this.power_law.TabIndex = 66;
+            this.power_law.Text = "Power law";
+            this.power_law.UseVisualStyleBackColor = true;
+            this.power_law.Click += new System.EventHandler(this.power_law_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(879, 68);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 40);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "Reserved";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pow_number
+            // 
+            this.pow_number.ForeColor = System.Drawing.Color.Silver;
+            this.pow_number.Location = new System.Drawing.Point(1059, 167);
+            this.pow_number.Name = "pow_number";
+            this.pow_number.Size = new System.Drawing.Size(111, 25);
+            this.pow_number.TabIndex = 68;
+            this.pow_number.Text = "Pow";
+            this.pow_number.Enter += new System.EventHandler(this.pow_number_Enter);
+            this.pow_number.Leave += new System.EventHandler(this.pow_number_Leave);
+            // 
+            // c_number
+            // 
+            this.c_number.ForeColor = System.Drawing.Color.Silver;
+            this.c_number.Location = new System.Drawing.Point(1059, 198);
+            this.c_number.Name = "c_number";
+            this.c_number.Size = new System.Drawing.Size(111, 25);
+            this.c_number.TabIndex = 69;
+            this.c_number.Text = "C";
+            this.c_number.Enter += new System.EventHandler(this.c_number_Enter);
+            this.c_number.Leave += new System.EventHandler(this.c_number_Leave);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1541, 915);
+            this.Controls.Add(this.c_number);
+            this.Controls.Add(this.pow_number);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.power_law);
+            this.Controls.Add(this.log);
             this.Controls.Add(this.comboBox_grayscale);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -887,6 +951,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_grayscale;
+        private System.Windows.Forms.Button log;
+        private System.Windows.Forms.Button power_law;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox pow_number;
+        private System.Windows.Forms.TextBox c_number;
     }
 }
 

@@ -196,5 +196,17 @@ namespace Image_processing
         {
             point_all(12);
         }
+
+        private void log_Click(object sender, EventArgs e)
+        {
+            point_all(13);
+        }
+
+        private void power_law_Click(object sender, EventArgs e)
+        {
+            Global.pow = Convert.ToSingle(pow_number.Text);
+            Global.c = Convert.ToInt32(c_number.Text);
+            point_all(14);
+        }
     }
 }
